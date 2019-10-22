@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - fracturable
+  - gold
+  - mimic
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - chargeblock
+  - fracturable
+  - backwall
+  - singles
+  - bombs
+  - noncol
+  - enemy
+  - mimic-crate
+  - mimic-enemy
+  - destroyer
+  - seeker
+  - forceblock
+  - vsCHBL
+  - girl-prop
+  - obstacle-prop
+  - grads1
+  - grads2
+  - grads3
+  - grads4
+  - PostProcessing
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: backwall
+    uniqueID: 1944775297
+    locked: 0
+  - name: seeker
+    uniqueID: 3473701101
+    locked: 0
+  - name: chop
+    uniqueID: 559680931
+    locked: 0
+  - name: gold
+    uniqueID: 1503699383
+    locked: 0
+  - name: UI
+    uniqueID: 3045194103
+    locked: 0
+  - name: enemy
+    uniqueID: 2215315661
+    locked: 0

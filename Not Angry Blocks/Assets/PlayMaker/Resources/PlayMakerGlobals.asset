@@ -1,0 +1,223 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 42938266, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: PlayMakerGlobals
+  m_EditorClassIdentifier: 
+  variables:
+    floatVariables:
+    - useVariable: 1
+      name: time
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: time_spent
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: goldscore_float
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 8
+    intVariables:
+    - useVariable: 1
+      name: goldscore
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 25
+    - useVariable: 1
+      name: combo
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: game_state
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 2
+    - useVariable: 1
+      name: qty
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: levels_in
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
+    - useVariable: 1
+      name: health
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 3
+    - useVariable: 1
+      name: shots_made
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: cmade
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: created
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    boolVariables:
+    - useVariable: 1
+      name: discount
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
+    stringVariables: []
+    vector2Variables: []
+    vector3Variables:
+    - useVariable: 1
+      name: mouse_world_g
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {x: 0, y: 0, z: 0}
+    - useVariable: 1
+      name: aim_pos_g
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {x: 0, y: 0, z: 0}
+    colorVariables: []
+    rectVariables: []
+    quaternionVariables: []
+    gameObjectVariables:
+    - useVariable: 1
+      name: global_target
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: maincamera
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    objectVariables: []
+    materialVariables: []
+    textureVariables: []
+    arrayVariables:
+    - useVariable: 1
+      name: bg_colors
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      type: 7
+      objectTypeName: UnityEngine.Object
+      floatValues: []
+      intValues: 
+      boolValues: 
+      stringValues: []
+      vector4Values:
+      - {x: 1, y: 0.90588236, z: 0.43137255, w: 1}
+      - {x: 0.18431373, y: 0.8, z: 0.79607844, w: 1}
+      - {x: 0.19607843, y: 0.7019608, z: 0.69411767, w: 1}
+      - {x: 0.7019608, y: 0.16078432, z: 0.5647059, w: 1}
+      - {x: 0.19607843, y: 0.7019608, z: 0.09019608, w: 1}
+      - {x: 0.44705883, y: 1, z: 0.32941177, w: 1}
+      objectReferences: []
+    - useVariable: 1
+      name: bg_colors_subtle
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      type: 7
+      objectTypeName: UnityEngine.Object
+      floatValues: []
+      intValues: 
+      boolValues: 
+      stringValues: []
+      vector4Values:
+      - {x: 0.49019608, y: 0.41960785, z: 0.5019608, w: 1}
+      - {x: 0.28235295, y: 0.16078432, z: 0.3019608, w: 1}
+      - {x: 0.4745098, y: 0.27058825, z: 0.5019608, w: 1}
+      - {x: 0.78431374, y: 0.67058825, z: 0.8, w: 1}
+      objectReferences: []
+    - useVariable: 1
+      name: bg_colors_shades
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      type: 7
+      objectTypeName: UnityEngine.Object
+      floatValues: []
+      intValues: 
+      boolValues: 
+      stringValues: []
+      vector4Values:
+      - {x: 0.24705882, y: 0.21176471, z: 0.2509804, w: 0.56078434}
+      - {x: 0.24705882, y: 0.21176471, z: 0.2509804, w: 0.5803922}
+      - {x: 0.19607843, y: 0.16862746, z: 0.2, w: 0.56078434}
+      - {x: 0.19607843, y: 0.16862746, z: 0.2, w: 0.5803922}
+      objectReferences: []
+    enumVariables: []
+    categories:
+    - 
+    - itemsystem
+    - movearound
+    - setupper
+    variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  events:
+  - build
+  - hello
+  - bb
+  - create
+  - destroy
+  - proceed
+  - open invetory
+  - close inv
+  - hover
+  - off
+  - devoured
+  - refresh
+  - jump
+  - go
+  - collect
+  - work
+  - restart
+  - stop
+  - ceasefire
+  - venemy
+  - venemywall
+  - vplayer
+  - vplayerwall
+  - deliver
+  - do
+  - leveldone
+  - animout
+  - ready
+  - fade
+  - readytogo
+  - add
