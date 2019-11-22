@@ -32,6 +32,18 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 8
+    - useVariable: 1
+      name: bottom_end
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: -13
+    - useVariable: 1
+      name: top_end
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 38
     intVariables:
     - useVariable: 1
       name: goldscore
@@ -83,6 +95,18 @@ MonoBehaviour:
       value: 0
     - useVariable: 1
       name: created
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: coinsinworld
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: demolished
       tooltip: 
       showInInspector: 0
       networkSync: 0
@@ -188,7 +212,7 @@ MonoBehaviour:
     - itemsystem
     - movearound
     - setupper
-    variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   events:
   - build
   - hello

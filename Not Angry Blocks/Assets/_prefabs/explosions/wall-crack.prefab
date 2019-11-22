@@ -73,14 +73,16 @@ MonoBehaviour:
       actionData:
         actionNames:
         - HutongGames.PlayMaker.Actions.PlayRandomSound
+        - HutongGames.PlayMaker.Actions.IntAdd
         - HutongGames.PlayMaker.Actions.Wait
         customNames:
         - 
         - 
-        actionEnabled: 0101
-        actionIsOpen: 0101
-        actionStartIndex: 000000000c000000
-        actionHashCodes: 55046d0448c01101
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000c0000000f000000
+        actionHashCodes: 55046d04603dd90548c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
@@ -155,7 +157,19 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
-        fsmIntParams: []
+        fsmIntParams:
+        - useVariable: 1
+          name: demolished
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 0
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 1
         fsmBoolParams:
         - useVariable: 0
           name: 
@@ -176,14 +190,14 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 00
+        byteData: 0000
         arrayParamSizes: 0300000003000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmObject
         - HutongGames.PlayMaker.FsmFloat
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000c0000001800000018000000180000000c0000000f0000000f0000000f0000000f000000110000000f0000001700000001000000
+        paramDataType: 140000001c0000000c0000001800000018000000180000000c0000000f0000000f0000000f0000000f000000110000001000000010000000010000000f0000001700000001000000
         paramName:
         - gameObject
         - position
@@ -197,11 +211,14 @@ MonoBehaviour:
         - 
         - volume
         - noRepeat
+        - intVariable
+        - add
+        - everyFrame
         - time
         - finishEvent
         - realTime
-        paramDataPos: 000000000000000000000000000000000100000002000000010000000000000001000000020000000300000000000000040000000000000000000000
-        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 000000000000000000000000000000000100000002000000010000000000000001000000020000000300000000000000000000000100000000000000040000000000000001000000
+        paramByteDataSize: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000001000000
     - name: die
       description: 
       colorIndex: 0
@@ -296,7 +313,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0

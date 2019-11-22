@@ -64,7 +64,7 @@ PlayerSettings:
   preserveFramebufferAlpha: 0
   disableDepthAndStencilBuffers: 0
   androidStartInFullscreen: 1
-  androidRenderOutsideSafeArea: 1
+  androidRenderOutsideSafeArea: 0
   androidUseSwappy: 0
   androidBlitType: 0
   defaultIsNativeResolution: 1
@@ -190,7 +190,7 @@ PlayerSettings:
   uIPrerenderedIcon: 0
   uIRequiresPersistentWiFi: 0
   uIRequiresFullScreen: 1
-  uIStatusBarHidden: 1
+  uIStatusBarHidden: 0
   uIExitOnSuspend: 0
   uIStatusBarStyle: 0
   iPhoneSplashScreen: {fileID: 0}
