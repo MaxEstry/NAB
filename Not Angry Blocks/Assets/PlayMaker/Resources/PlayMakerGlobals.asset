@@ -111,6 +111,12 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 0
+    - useVariable: 1
+      name: shots_max
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 8
     boolVariables:
     - useVariable: 1
       name: discount
@@ -118,6 +124,12 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 1
+    - useVariable: 1
+      name: rewardsdone
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     stringVariables: []
     vector2Variables: []
     vector3Variables:
@@ -212,7 +224,7 @@ MonoBehaviour:
     - itemsystem
     - movearound
     - setupper
-    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   events:
   - build
   - hello
