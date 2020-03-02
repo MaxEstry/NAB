@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1386283828595523299}
   - component: {fileID: 7931076530571900612}
   m_Layer: 0
-  m_Name: gold shitter 8
+  m_Name: gold shitter reward
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: 8
+          value: 9
         fsmBoolParams: []
         fsmVector2Params: []
         fsmVector3Params: []

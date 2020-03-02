@@ -16,7 +16,7 @@ MonoBehaviour:
   fsm:
     dataVersion: 2
     usedInTemplate: {fileID: 11400000}
-    name: create money
+    name: reward_fx
     startState: pop bg
     states:
     - name: pop bg
@@ -42,10 +42,6 @@ MonoBehaviour:
         - HutongGames.PlayMaker.Actions.FindChild
         - HutongGames.PlayMaker.Actions.AnimateFloatV2
         - HutongGames.PlayMaker.Actions.SetScale
-        - HutongGames.PlayMaker.Actions.FindChild
-        - HutongGames.PlayMaker.Actions.GetPosition
-        - HutongGames.PlayMaker.Actions.CreateObject
-        - HutongGames.PlayMaker.Actions.PlayRandomSound
         customNames:
         - 
         - 
@@ -55,14 +51,10 @@ MonoBehaviour:
         - 
         - 
         - 
-        - 
-        - 
-        - 
-        - 
-        actionEnabled: 010101010101010101010101
-        actionIsOpen: 010101010101010101010101
-        actionStartIndex: 00000000030000000c00000013000000160000001b0000001e000000270000002e00000031000000380000003d000000
-        actionHashCodes: f90ba70132cf3e00afff1105f90ba701b2cf1000f90ba70132cf3e00afff1105f90ba7015552ad05bf83c90055046d04
+        actionEnabled: 0101010101010101
+        actionIsOpen: 0101010101010101
+        actionStartIndex: 00000000030000000c00000013000000160000001b0000001e00000027000000
+        actionHashCodes: f90ba70132cf3e00afff1105f90ba701b2cf1000f90ba70132cf3e00afff1105
         unityObjectParams: []
         fsmGameObjectParams:
         - useVariable: 1
@@ -79,31 +71,6 @@ MonoBehaviour:
           value: {fileID: 0}
         - useVariable: 1
           name: found_ico
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: found_moneyhole
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 6004582330385678873, guid: 7176937c779b2cf409efc22b1b016494,
-            type: 3}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {fileID: 0}
-        - useVariable: 1
-          name: 
           tooltip: 
           showInInspector: 0
           networkSync: 0
@@ -153,30 +120,6 @@ MonoBehaviour:
           gameObject:
             useVariable: 1
             name: found_ico
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 0
-          gameObject:
-            useVariable: 0
-            name: 
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: found_moneyhole
-            tooltip: 
-            showInInspector: 0
-            networkSync: 0
-            value: {fileID: 0}
-        - ownerOption: 1
-          gameObject:
-            useVariable: 1
-            name: maincamera
             tooltip: 
             showInInspector: 0
             networkSync: 0
@@ -254,20 +197,7 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: ico
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: moneyhole
-        fsmObjectParams:
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          typeName: UnityEngine.AudioClip
-          value: {fileID: 8300000, guid: 85628ddd59b3c2448b1ccfc89f997878, type: 3}
+        fsmObjectParams: []
         fsmVarParams: []
         fsmArrayParams: []
         fsmEnumParams: []
@@ -356,36 +286,6 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 1
         fsmIntParams: []
         fsmBoolParams:
         - useVariable: 0
@@ -412,38 +312,8 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 1
-        - useVariable: 0
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: 0
         fsmVector2Params: []
         fsmVector3Params:
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: 
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: moneyhole_pos
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
-        - useVariable: 1
-          name: moneyhole_pos
-          tooltip: 
-          showInInspector: 0
-          networkSync: 0
-          value: {x: 0, y: 0, z: 0}
         - useVariable: 1
           name: 
           tooltip: 
@@ -462,14 +332,12 @@ MonoBehaviour:
         stringParams:
         - 
         - 
-        byteData: 010000000001000000010000000001000000000000
-        arrayParamSizes: 0100000001000000
-        arrayParamTypes:
-        - HutongGames.PlayMaker.FsmObject
-        - HutongGames.PlayMaker.FsmFloat
+        byteData: 01000000000100000001000000000100
+        arrayParamSizes: 
+        arrayParamTypes: []
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 1400000012000000130000000f00000016000000070000000f0000000f0000000f000000110000001700000001000000140000001c0000000f0000000f0000000f000000010000000100000014000000120000001300000014000000110000001100000001000000010000001400000012000000130000000f00000016000000070000000f0000000f0000000f000000110000001700000001000000140000001c0000000f0000000f0000000f0000000100000001000000140000001200000013000000140000001c0000000f0000000f0000000f000000070000000100000013000000130000001c0000001c00000013000000140000001c0000000c000000180000000c0000000f0000000f00000011000000
+        paramDataType: 1400000012000000130000000f00000016000000070000000f0000000f0000000f000000110000001700000001000000140000001c0000000f0000000f0000000f000000010000000100000014000000120000001300000014000000110000001100000001000000010000001400000012000000130000000f00000016000000070000000f0000000f0000000f000000110000001700000001000000140000001c0000000f0000000f0000000f0000000100000001000000
         paramName:
         - gameObject
         - childName
@@ -517,31 +385,8 @@ MonoBehaviour:
         - z
         - everyFrame
         - lateUpdate
-        - gameObject
-        - childName
-        - storeResult
-        - gameObject
-        - vector
-        - x
-        - y
-        - z
-        - space
-        - everyFrame
-        - gameObject
-        - spawnPoint
-        - position
-        - rotation
-        - storeObject
-        - gameObject
-        - position
-        - audioClips
-        - 
-        - weights
-        - 
-        - volume
-        - noRepeat
-        paramDataPos: 00000000000000000000000000000000000000000000000001000000020000000300000000000000000000000400000001000000000000000400000005000000060000000500000006000000020000000100000001000000030000000100000002000000070000000800000004000000020000000200000007000000010000000900000008000000090000000a00000003000000010000000d00000005000000010000000b0000000c0000000d0000000e0000000f00000006000000030000000300000007000000020000000e0000000f00000010000000100000001400000004000000050000000300000004000000060000000800000005000000000000000000000001000000110000001200000004000000
-        paramByteDataSize: 000000000000000000000000000000000000000004000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000000000004000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000001000000010000000000000000000000000000000000000000000000000000000000000000000000040000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+        paramDataPos: 00000000000000000000000000000000000000000000000001000000020000000300000000000000000000000400000001000000000000000400000005000000060000000500000006000000020000000100000001000000030000000100000002000000070000000800000004000000020000000200000007000000010000000900000008000000090000000a00000003000000010000000d00000005000000010000000b0000000c0000000d0000000e0000000f000000
+        paramByteDataSize: 00000000000000000000000000000000000000000400000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000100000001000000000000000000000000000000000000000000000000000000010000000100000000000000000000000000000000000000000000000400000000000000000000000000000000000000000000000100000000000000000000000000000000000000000000000100000001000000
     events:
     - name: FINISHED
       isSystemEvent: 1

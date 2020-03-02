@@ -31,7 +31,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 88
+      value: 0
     - useVariable: 1
       name: bottom_end
       tooltip: 
@@ -46,6 +46,12 @@ MonoBehaviour:
       value: 38
     - useVariable: 1
       name: combo_timer
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: session_time
       tooltip: 
       showInInspector: 0
       networkSync: 0
@@ -80,7 +86,7 @@ MonoBehaviour:
       tooltip: 
       showInInspector: 0
       networkSync: 0
-      value: 1
+      value: 0
     - useVariable: 1
       name: health
       tooltip: 
@@ -136,6 +142,18 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 0
+    - useVariable: 1
+      name: demolisher_done
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: pause_needed
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 1
     stringVariables: []
     vector2Variables: []
     vector3Variables:
@@ -230,7 +248,7 @@ MonoBehaviour:
     - itemsystem
     - movearound
     - setupper
-    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   events:
   - build
   - hello
@@ -263,3 +281,5 @@ MonoBehaviour:
   - fade
   - readytogo
   - add
+  - fullpayment
+  - reroll
