@@ -1,0 +1,2540 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 9
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientEquatorColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientGroundColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &4
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 11
+  m_GIWorkflowMode: 1
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 1
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 1
+    m_BakeResolution: 50
+    m_AtlasSize: 1024
+    m_AO: 1
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 0
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 1
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 512
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 512
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 0
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+  m_LightingDataAsset: {fileID: 0}
+  m_UseShadowmask: 0
+--- !u!196 &5
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 2
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666666
+    manualTileSize: 0
+    tileSize: 256
+    accuratePlacement: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &58155195
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 58155199}
+  - component: {fileID: 58155198}
+  - component: {fileID: 58155197}
+  - component: {fileID: 58155196}
+  m_Layer: 0
+  m_Name: Smooth Save Demo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &58155196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58155195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1384774831, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fsm:
+    dataVersion: 0
+    usedInTemplate: {fileID: 0}
+    name: FSM
+    startState: Welcome!
+    states:
+    - name: Welcome!
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 112
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Thank you for your purchase.  :)
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 144
+        width: 233
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: Click the states below to learn how to use Smooth Save.
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 176
+        width: 391
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: 1 - One-Action Saving
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 240
+        width: 166
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyFsmToPool
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyGlobalsToPool
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 0101010101010101
+        actionIsOpen: 0101010101010101
+        actionStartIndex: 00000000010000000200000006000000070000000b0000000c0000000d000000
+        actionHashCodes: b0acee5ab0acee5a289cf7b4b0acee5a289cf7b4b0acee5ab0acee5ab0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 54686520656173696573742077617920746f2075736520536d6f6f746820536176652069732077697468206f6e65206f662074686573652074776f20616374696f6e732e5769746820612073696e676c6520616374696f6e2c20796f752063616e2073617665206576657279207661726961626c6520696e207468652063757272656e742046534d2e0000000001004f7220796f752063616e207361766520616c6c2074686520676c6f62616c207661726961626c65732e000000000100576974682074686973206d6574686f642c2065616368207661726961626c65206973207361766564207573696e672070726f70657274696573207375636820617320697473207479706520616e64206f776e65722e494d504f5254414e543a20496620796f75206861766520646966666572656e74207661726961626c65732077697468206964656e746963616c206e616d657320616e64206f776e6572732c207375636820617320696e20696e7374616e636573206f662061207072656661622c2074686973206d6574686f64206d6179206e6f7420776f726b2e53656520224175746f6d61746963616c6c79204964656e7469666965642044617461222062656c6f7720666f722064657461696c732e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0300000003000000120000000700000011000000170000000300000012000000070000001100000017000000030000000300000003000000
+        paramName:
+        - comment
+        - comment
+        - Filter
+        - VariableType
+        - SaveNow
+        - FileErrorEvent
+        - comment
+        - Filter
+        - VariableType
+        - SaveNow
+        - FileErrorEvent
+        - comment
+        - comment
+        - comment
+        paramDataPos: 000000004400000000000000890000008d0000008f0000008f00000001000000b8000000bc000000be000000be000000130100009a010000
+        paramByteDataSize: 4400000045000000000000000400000002000000000000002900000000000000040000000200000000000000550000008700000036000000
+    - name: 2 - One-Action Loading
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 272
+        width: 173
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyPoolToFsm
+        - HutongGames.PlayMaker.Actions.CopyPoolToGlobals
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000010000000900000011000000
+        actionHashCodes: b0acee5a9accb4659accb465b0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 4c6f6164696e67207468652064617461206261636b20696e746f20746865207661726961626c6573206973206a7573742061732073696d706c652e000000000100ffffffff00000000000100ffffffff004e6f7465207468617420796f752063616e20616c736f206c6f6164207661726961626c657320696e646976696475616c6c792c206576656e2069662074686579207765726520736176656420696e2062756c6b2e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 030000001200000007000000170000001100000010000000120000001700000017000000120000000700000017000000110000001000000012000000170000001700000003000000
+        paramName:
+        - comment
+        - Filter
+        - VariableType
+        - DataNotFoundEvent
+        - LoadNow
+        - PoolId
+        - PoolName
+        - FileNotFoundEvent
+        - FileErrorEvent
+        - Filter
+        - VariableType
+        - DataNotFoundEvent
+        - LoadNow
+        - PoolId
+        - PoolName
+        - FileNotFoundEvent
+        - FileErrorEvent
+        - comment
+        paramDataPos: 00000000000000003b0000003f0000003f0000004100000001000000460000004600000002000000460000004a0000004a0000004c00000003000000510000005100000051000000
+        paramByteDataSize: 3b0000000000000004000000000000000200000005000000000000000000000000000000000000000400000000000000020000000500000000000000000000000000000054000000
+    - name: 3 - Saving with Filters and Types
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 336
+        width: 238
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyFsmToPool
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyGlobalsToPool
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000001000000020000000600000007000000
+        actionHashCodes: b0acee5ab0acee5a289cf7b4b0acee5a289cf7b4
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Save*
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 496620796f75206f6e6c792077616e7420746f207361766520612073656c656374696f6e206f6620746865207661726961626c657320696e20796f75722046534d206f7220676c6f62616c732c20796f752063616e2075736520612046696c746572206f7220547970652e4865726520776520776f756c64206f6e6c792073617665207661726961626c65732077686f7365206e616d657320626567696e2077697468202253617665222e0000000001004865726520776520776f756c64206f6e6c7920736176652047616d65204f626a656374207661726961626c65732e040000000100
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0300000003000000120000000700000011000000170000000300000012000000070000001100000017000000
+        paramName:
+        - comment
+        - comment
+        - Filter
+        - VariableType
+        - SaveNow
+        - FileErrorEvent
+        - comment
+        - Filter
+        - VariableType
+        - SaveNow
+        - FileErrorEvent
+        paramDataPos: 000000006b00000000000000ab000000af000000b1000000b100000001000000df000000e3000000e5000000
+        paramByteDataSize: 6b00000040000000000000000400000002000000000000002e00000000000000040000000200000000000000
+    - name: 4 - Loading with Filters and Types
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 368
+        width: 245
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyPoolToFsm
+        - HutongGames.PlayMaker.Actions.CopyPoolToGlobals
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000010000000900000011000000
+        actionHashCodes: b0acee5a9accb4659accb465b0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Save*
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 596f752063616e20616c736f206c6f6164207769746820612046696c746572206f7220547970652e000000000100ffffffff00040000000100ffffffff004e6f7465207468617420796f752063616e2075736520646966666572656e742066696c7465727320616e6420747970657320666f7220736176696e6720616e64206c6f6164696e672c2074686f7567682074686973206d6179207472696767657220612044617461204e6f7420466f756e64204576656e7420287365652062656c6f77292e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 030000001200000007000000170000001100000010000000120000001700000017000000120000000700000017000000110000001000000012000000170000001700000003000000
+        paramName:
+        - comment
+        - Filter
+        - VariableType
+        - DataNotFoundEvent
+        - LoadNow
+        - PoolId
+        - PoolName
+        - FileNotFoundEvent
+        - FileErrorEvent
+        - Filter
+        - VariableType
+        - DataNotFoundEvent
+        - LoadNow
+        - PoolId
+        - PoolName
+        - FileNotFoundEvent
+        - FileErrorEvent
+        - comment
+        paramDataPos: 0000000000000000280000002c0000002c0000002e0000000100000033000000330000000200000033000000370000003700000039000000030000003e0000003e0000003e000000
+        paramByteDataSize: 280000000000000004000000000000000200000005000000000000000000000000000000000000000400000000000000020000000500000000000000000000000000000085000000
+    - name: 5 - The Data Pool
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 432
+        width: 135
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000010000000200000003000000
+        actionHashCodes: b0acee5ab0acee5ab0acee5ab0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 5768656e20736176696e672c206461746120636f6d65732066726f6d20796f7572207661726961626c657320616e6420697320636f7069656420696e746f2061206461746120706f6f6c20616c6f6e67207769746820696e666f726d6174696f6e20746f206964656e74696679207468656d2e416674657220616c6c20746865206461746120796f752077616e7420697320696e2074686520706f6f6c2c207468652077686f6c65207468696e67206973207468656e207772697474656e20746f2066696c652e4c6f6164696e6720776f726b7320696e20726576657273652e2020466972737420746865206461746120706f6f6c2066696c65206973206c6f616465642e20205468656e20646174612066726f6d2074686520706f6f6c20697320636f7069656420696e746f2065616368207661726961626c65207573696e6720746865206964656e74696679696e6720696e666f726d6174696f6e2e536d6f6f746820536176652077696c6c206175746f6d61746963616c6c79206c6f6164206f72206372656174652061206461746120706f6f6c2062792064656661756c742e2020536f20696620796f75206f6e6c79206e656564206f6e65206461746120706f6f6c2c207468656e20796f75206e65766572206e65656420746f207468696e6b2061626f7574207468656d21
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000030000000300000003000000
+        paramName:
+        - comment
+        - comment
+        - comment
+        - comment
+        paramDataPos: 0000000073000000c70000005e010000
+        paramByteDataSize: 73000000540000009700000092000000
+    - name: 8 - Saving Variables Individually
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 560
+        width: 236
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyBoolToPool
+        - HutongGames.PlayMaker.Actions.CopyColorToPool
+        - HutongGames.PlayMaker.Actions.CopyFloatToPool
+        - HutongGames.PlayMaker.Actions.CopyGameObjectToPool
+        - HutongGames.PlayMaker.Actions.CopyIntToPool
+        - HutongGames.PlayMaker.Actions.CopyQuaternionToPool
+        - HutongGames.PlayMaker.Actions.CopyRectToPool
+        - HutongGames.PlayMaker.Actions.CopyStringToPool
+        - HutongGames.PlayMaker.Actions.CopyVector2ToPool
+        - HutongGames.PlayMaker.Actions.CopyVector3ToPool
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 0101010101010101010101
+        actionIsOpen: 0101010101010101010101
+        actionStartIndex: 0000000001000000030000000500000007000000090000000b0000000d0000000f0000001100000013000000
+        actionHashCodes: b0acee5a6758bcf9f685f6b6dd731dc5a0072d4cead0f8eeb330ce192dda6f5f607338138aeba9c8692bda50
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: My GameObject
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: My String
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 546f20636f70792061207370656369666963207661726961626c6520746f2074686520706f6f6c2c206a757374207573652074686520616374696f6e20666f722074686174207479706520616e64206769766520697420746865207661726961626c652e00014d7920426f6f6c0000000000000000000000000000803f014d7920436f6c6f7200000000014d7920466c6f617400000000014d7920496e7400000000000000000000000000000000014d79205175617465726e696f6e00000000000000000000000000000000014d7920526563740000000000000000014d7920566563746f7232000000000000000000000000014d7920566563746f7233
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000110000001200000019000000120000000f000000120000001300000012000000100000001200000023000000120000001e00000012000000120000001200000025000000120000001c00000012000000
+        paramName:
+        - comment
+        - Bool
+        - Key
+        - Color
+        - Key
+        - Float
+        - Key
+        - GameObject
+        - Key
+        - Int
+        - Key
+        - Quaternion
+        - Key
+        - Rect
+        - Key
+        - String
+        - Key
+        - Vector2
+        - Key
+        - Vector3
+        - Key
+        paramDataPos: 0000000064000000000000006d000000010000008600000002000000000000000300000093000000040000009e00000005000000bc000000060000000700000008000000d400000009000000e70000000a000000
+        paramByteDataSize: 64000000090000000000000019000000000000000d0000000000000000000000000000000b000000000000001e000000000000001800000000000000000000000000000013000000000000001700000000000000
+    - name: 9 - Saving the Data Pool
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 592
+        width: 181
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.SaveDataPool
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: b0acee5a0c85f1bf
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 5768656e20796f7527766520636f7069656420616c6c20796f7572207661726961626c657320746f20746865206461746120706f6f6c2c207361766520697420746f2066696c652e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 030000001700000017000000
+        paramName:
+        - comment
+        - NotLoadedEvent
+        - FileErrorEvent
+        paramDataPos: 000000004800000048000000
+        paramByteDataSize: 480000000000000000000000
+    - name: 10 - Loading the Data Pool
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 656
+        width: 197
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.LoadDataPool
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000100000005000000
+        actionHashCodes: b0acee5af60ad72cb0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 5768656e20697427732074696d652c206c6f616420746865206461746120706f6f6c2066726f6d2066696c652e000000000141666572206120706f6f6c206973206c6f616465642c207468652064617461206d75737420626520636f7069656420696e746f207661726961626c657320746f20626520757365642e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 030000001000000012000000170000001700000003000000
+        paramName:
+        - comment
+        - PoolId
+        - PoolName
+        - FileNotFoundEvent
+        - FileErrorEvent
+        - comment
+        paramDataPos: 000000002d00000000000000320000003200000032000000
+        paramByteDataSize: 2d0000000500000000000000000000000000000049000000
+    - name: 11 - Loading Variables Individually
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 688
+        width: 252
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyPoolToBool
+        - HutongGames.PlayMaker.Actions.CopyPoolToColor
+        - HutongGames.PlayMaker.Actions.CopyPoolToFloat
+        - HutongGames.PlayMaker.Actions.CopyPoolToGameObject
+        - HutongGames.PlayMaker.Actions.CopyPoolToInt
+        - HutongGames.PlayMaker.Actions.CopyPoolToQuaternion
+        - HutongGames.PlayMaker.Actions.CopyPoolToRect
+        - HutongGames.PlayMaker.Actions.CopyPoolToString
+        - HutongGames.PlayMaker.Actions.CopyPoolToVector2
+        - HutongGames.PlayMaker.Actions.CopyPoolToVector3
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 0101010101010101010101
+        actionIsOpen: 0101010101010101010101
+        actionStartIndex: 000000000100000004000000070000000a0000000d000000100000001300000016000000190000001c000000
+        actionHashCodes: b0acee5aed1be4003c65d9f5e344f09c66210d38300d1df63967470b33bf4a24267d2154d0cfe1396f3f20ce
+        unityObjectParams: []
+        fsmGameObjectParams:
+        - useVariable: 1
+          name: My GameObject
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {fileID: 0}
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 1
+          name: My String
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 436f7079696e6720696e646976696475616c207661726961626c65732066726f6d2074686520706f6f6c20776f726b73207468652073616d6520617320736176696e67207468656d2e00014d7920426f6f6c0000000000000000000000000000803f014d7920436f6c6f7200000000014d7920466c6f617400000000014d7920496e7400000000000000000000000000000000014d79205175617465726e696f6e00000000000000000000000000000000014d7920526563740000000000000000014d7920566563746f7232000000000000000000000000014d7920566563746f7233
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 030000001100000012000000170000001900000012000000170000000f00000012000000170000001300000012000000170000001000000012000000170000002300000012000000170000001e00000012000000170000001200000012000000170000002500000012000000170000001c0000001200000017000000
+        paramName:
+        - comment
+        - Bool
+        - Key
+        - DataNotFoundEvent
+        - Color
+        - Key
+        - DataNotFoundEvent
+        - Float
+        - Key
+        - DataNotFoundEvent
+        - GameObject
+        - Key
+        - DataNotFoundEvent
+        - Int
+        - Key
+        - DataNotFoundEvent
+        - Quaternion
+        - Key
+        - DataNotFoundEvent
+        - Rect
+        - Key
+        - DataNotFoundEvent
+        - String
+        - Key
+        - DataNotFoundEvent
+        - Vector2
+        - Key
+        - DataNotFoundEvent
+        - Vector3
+        - Key
+        - DataNotFoundEvent
+        paramDataPos: 0000000049000000000000005200000052000000010000006b0000006b00000002000000780000000000000003000000780000007800000004000000830000008300000005000000a1000000a100000006000000b90000000700000008000000b9000000b900000009000000cc000000cc0000000a000000e3000000
+        paramByteDataSize: 490000000900000000000000000000001900000000000000000000000d00000000000000000000000000000000000000000000000b00000000000000000000001e0000000000000000000000180000000000000000000000000000000000000000000000130000000000000000000000170000000000000000000000
+    - name: 12 - File Not Found Event
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 752
+        width: 188
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: First Run
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Load Default
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.LoadDataPool
+        customNames:
+        - 
+        - 
+        - 
+        actionEnabled: 010101
+        actionIsOpen: 010101
+        actionStartIndex: 000000000100000002000000
+        actionHashCodes: b0acee5ab0acee5af60ad72c
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 5768656e206c6f6164696e672c20796f752063616e207370656369667920616e206576656e7420746861742077696c6c2062652063616c6c656420696620746865206461746120706f6f6c2066696c652069736e277420666f756e642e546869732069732075736566756c20666f72207768656e207468652067616d652069732072756e20666f72207468652066697273742074696d65206f72207468652073657474696e67732068617665206265656e20636c65617265642e000000000146697273742052756e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 030000000300000010000000120000001700000017000000
+        paramName:
+        - comment
+        - comment
+        - PoolId
+        - PoolName
+        - FileNotFoundEvent
+        - FileErrorEvent
+        paramDataPos: 000000005d000000ba00000000000000bf000000c8000000
+        paramByteDataSize: 5d0000005d00000005000000000000000900000000000000
+    - name: 13 - Data Not Found Event
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 800
+        width: 195
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: First Run
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Load Default
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyPoolToInt
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: b0acee5a300d1df6
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 53696d696c61726c792c207468652044617461204e6f7420466f756e64204576656e742069732063616c6c656420696620796f752074727920746f20636f707920646174612066726f6d2074686520706f6f6c20746861742069736e27742074686572652e0000000001506c61796572204865616c746846697273742052756e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000100000001200000017000000
+        paramName:
+        - comment
+        - Int
+        - Key
+        - DataNotFoundEvent
+        paramDataPos: 00000000650000000000000077000000
+        paramByteDataSize: 65000000120000000000000009000000
+    - name: Load Default
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 352
+        y: 784
+        width: 104
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.SetIntValue
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: 9ffa9c66
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000000001506c61796572204865616c7468640000000000
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 100000001000000001000000
+        paramName:
+        - intVariable
+        - intValue
+        - everyFrame
+        paramDataPos: 000000001200000017000000
+        paramByteDataSize: 120000000500000001000000
+    - name: 15 - File Error Event
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 896
+        width: 155
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: Save Failure
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Notify User
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.SaveDataPool
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: b0acee5a0c85f1bf
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 496620746865726520697320612066696c6573797374656d206572726f72207768656e20616363657373696e672061206461746120706f6f6c2066696c652c207468652046696c65204572726f72204576656e742077696c6c206c657420796f752068616e646c652069742e53617665204661696c757265
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 030000001700000017000000
+        paramName:
+        - comment
+        - NotLoadedEvent
+        - FileErrorEvent
+        paramDataPos: 000000006c0000006c000000
+        paramByteDataSize: 6c000000000000000c000000
+    - name: Notify User
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 352
+        y: 912
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames: []
+        customNames: []
+        actionEnabled: 
+        actionIsOpen: 
+        actionStartIndex: 
+        actionHashCodes: 
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 
+        paramName: []
+        paramDataPos: 
+        paramByteDataSize: 
+    - name: 16 - Automatically Identified Data
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 976
+        width: 245
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000010000000200000003000000
+        actionHashCodes: b0acee5ab0acee5ab0acee5ab0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 42792064656661756c742c207661726961626c657320617265206964656e746966696564207573696e6720696e666f726d6174696f6e2073756368206173207468656972207479706520616e64206f776e6572206e616d652e20205468697320616c7761797320776f726b7320666f7220676c6f62616c207661726961626c657320616e64206f6674656e20776f726b7320666f722046534d207661726961626c65732e486f77657665722c206265636175736520646966666572656e742047616d65204f626a656374732063616e2068617665207468652073616d65206e616d652c2064617461206964656e74696669636174696f6e2063616e206f7665726c617020616e6420646966666572656e74207661726961626c65732063616e20626520636f6e6e656374656420746f207468652073616d6520646174612e54686973206973206f6674656e2074686520636173652077697468206d756c7469706c6520696e7374616e636573206f662061207072656661622e2020546869732063616e2062652075736566756c20696620796f752077616e7420657665727920696e7374616e636520746f20676574207468652073616d6520646174612e42757420696620796f75206e656564206561636820696e7374616e636520746f206861766520697473206f776e20646174612c20757365206b65796564207661726961626c657320696e73746561642e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000030000000300000003000000
+        paramName:
+        - comment
+        - comment
+        - comment
+        - comment
+        paramDataPos: 00000000a40000003e010000be010000
+        paramByteDataSize: a40000009a0000008000000050000000
+    - name: 17 - Using Keys to Identify Data
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 1008
+        width: 233
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyIntToPool
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.CopyPoolToInt
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 01010101
+        actionIsOpen: 01010101
+        actionStartIndex: 00000000010000000300000004000000
+        actionHashCodes: b0acee5aead0f8eeb0acee5a300d1df6
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Enemy 7C
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Enemy 7C
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 4b657973206c657420796f75206964656e746966792064617461206265747765656e206d756c7469706c6520696e7374616e636573206f662061207072656661622c206f7220696e206f7468657220636173657320776865726520796f75206e656564206d6f726520636f6e74726f6c2e0000000001416d6d6f2043757272656e744b65797320616c736f206c657420796f75206c6f6164206461746120696e746f206120646966666572656e74207661726961626c65206f66207468652073616d6520747970652e0000000001416d6d6f205374617274
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000100000001200000003000000100000001200000017000000
+        paramName:
+        - comment
+        - Int
+        - Key
+        - comment
+        - Int
+        - Key
+        - DataNotFoundEvent
+        paramDataPos: 00000000710000000000000082000000c900000001000000d8000000
+        paramByteDataSize: 710000001100000000000000470000000f0000000000000000000000
+    - name: 19 - Full Documentation
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 1136
+        width: 179
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: b0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 466f722066756c6c20646f63756d656e746174696f6e2c207365652022536d6f6f74682053617665204d616e75616c2e7064662220696e207468652022536d6f6f7468205361766520666f7220506c61794d616b657222206469726563746f72792e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000
+        paramName:
+        - comment
+        paramDataPos: 00000000
+        paramByteDataSize: 62000000
+    - name: That's it!
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 1200
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: b0acee5ab0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 5468616e6b7320616761696e20666f722070757263686173696e6720536d6f6f746820536176652e20204920686f70652074686174206974206d616b657320796f7572206372656174696e6720626f74682065617369657220616e64206d6f726520666c657869626c652e496620796f75206861766520616e79207175657374696f6e732c20646f6e277420686573697461746520746f20636f6e74616374206d652e0a737570706f7274404368726973746f70686572437265617465732e636f6d
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0300000003000000
+        paramName:
+        - comment
+        - comment
+        paramDataPos: 000000006b000000
+        paramByteDataSize: 6b00000057000000
+    - name: 6 - Managing Data Pools
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 464
+        width: 181
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.MakeDataPool
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.DeleteDataPool
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.UnloadDataPool
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 000000000100000004000000050000000800000009000000
+        actionHashCodes: b0acee5ac6d0254bb0acee5aa7a4549eb0acee5ac631a949
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 546f206d616b6520657874726120706f6f6c732c206a757374207573652074686520616374696f6e2e0000000001506f6f6c2049444561636820706f6f6c206973206964656e74696669656420627920616e2049442e2020557365207468697320746f206d616e6167652069742e0000000001506f6f6c2049445768656e20796f7527726520646f6e652077697468206120706f6f6c2c2069742773206120676f6f64206964656120746f20756e6c6f616420697420746f2073617665206d656d6f72792e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000120000001000000017000000030000001000000017000000170000000300000017000000
+        paramName:
+        - comment
+        - PoolName
+        - PoolId
+        - FileErrorEvent
+        - comment
+        - PoolId
+        - FileNotFoundEvent
+        - FileErrorEvent
+        - comment
+        - NotLoadedEvent
+        paramDataPos: 00000000000000002900000035000000350000006e0000007a0000007a0000007a000000c5000000
+        paramByteDataSize: 29000000000000000c00000000000000390000000c00000000000000000000004b00000000000000
+    - name: 14 - Not Loaded Event
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 848
+        width: 168
+        height: 32
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions:
+      - fsmEvent:
+          name: No Pool
+          isSystemEvent: 0
+          isGlobal: 0
+        toState: Init Session
+        linkStyle: 0
+        linkConstraint: 0
+        colorIndex: 0
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.GetDataPoolInfo
+        customNames:
+        - 
+        - 
+        actionEnabled: 0101
+        actionIsOpen: 0101
+        actionStartIndex: 0000000001000000
+        actionHashCodes: b0acee5a0bfbf6dc
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 466f7220736f6d65206576656e747320796f752063616e20737065636966792061204e6f74204c6f61646564204576656e742e2020546869732077696c6c2062652063616c6c6564206966206e6f206461746120706f6f6c2069732063757272656e746c79206c6f616465642e000000000100000000014e6f20506f6f6c
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0300000010000000120000001000000017000000
+        paramName:
+        - comment
+        - PoolId
+        - PoolName
+        - PoolSize
+        - NotLoadedEvent
+        paramDataPos: 000000006d000000000000007200000077000000
+        paramByteDataSize: 6d00000005000000000000000500000007000000
+    - name: Init Session
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 352
+        y: 864
+        width: 100
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.MakeDataPool
+        customNames:
+        - 
+        actionEnabled: 01
+        actionIsOpen: 01
+        actionStartIndex: 00000000
+        actionHashCodes: c6d0254b
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 0000000001506f6f6c204944
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 120000001000000017000000
+        paramName:
+        - PoolName
+        - PoolId
+        - FileErrorEvent
+        paramDataPos: 00000000000000000c000000
+        paramByteDataSize: 000000000c00000000000000
+    - name: 7 - Using Data Pool Information
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 496
+        width: 230
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.GetDataPoolInfo
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.SetDataPoolName
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.DebugDataPool
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 010101010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 000000000100000005000000060000000800000009000000
+        actionHashCodes: b0acee5a0bfbf6dcb0acee5a6b391c08b0acee5ab0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams:
+        - useVariable: 1
+          name: Pool Name
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: Dungeon of Doom
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 596f752063616e2067657420696e666f726d6174696f6e2061626f757420746865206461746120706f6f6c20617420616e792074696d652e00000000010000000001506f6f6c2053697a654461746120706f6f6c206e616d657320617265206a757374206120636f6e76656e69656e636520666f7220796f752e2020596f7520646f6e2774206861766520746f20736574207468656d2c2062757420746865792772652075736566756c20666f72206170706c79696e672068756d616e2d667269656e646c79206964656e74696669636174696f6e20746f20706f6f6c732e496620796f75206e65656420736f6d652068656c70206669677572696e67206f7574207768617420697320696e20746865206461746120706f6f6c20616e6420686f772069742773206964656e7469666965642c2075736520746865204465627567204461746120506f6f6c20616374696f6e2e446973706c6179732074686520636f6e74656e7473206f6620746865206461746120706f6f6c206f6e2074686520636f6e736f6c652e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 03000000100000001200000010000000170000000300000012000000170000000300000003000000
+        paramName:
+        - comment
+        - PoolId
+        - PoolName
+        - PoolSize
+        - NotLoadedEvent
+        - comment
+        - PoolName
+        - NotLoadedEvent
+        - comment
+        - description
+        paramDataPos: 0000000038000000000000003d0000004b0000004b00000001000000df000000df00000053010000
+        paramByteDataSize: 3800000005000000000000000e000000000000009400000000000000000000007400000036000000
+    - name: 18 - Special Platforms and PlayerPrefs
+      description: 
+      colorIndex: 0
+      position:
+        serializedVersion: 2
+        x: 64
+        y: 1072
+        width: 278
+        height: 16
+      isBreakpoint: 0
+      isSequence: 0
+      hideUnused: 0
+      transitions: []
+      actionData:
+        actionNames:
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.UsePlayerPrefs
+        - HutongGames.PlayMaker.Actions.Comment
+        - HutongGames.PlayMaker.Actions.Comment
+        customNames:
+        - 
+        - 
+        - 
+        - 
+        - 
+        actionEnabled: 0101010101
+        actionIsOpen: 0101010101
+        actionStartIndex: 0000000001000000020000000300000004000000
+        actionHashCodes: b0acee5ab0acee5a3ee6a00ab0acee5ab0acee5a
+        unityObjectParams: []
+        fsmGameObjectParams: []
+        fsmOwnerDefaultParams: []
+        animationCurveParams: []
+        functionCallParams: []
+        fsmTemplateControlParams: []
+        fsmEventTargetParams: []
+        fsmPropertyParams: []
+        layoutOptionParams: []
+        fsmStringParams: []
+        fsmObjectParams: []
+        fsmVarParams: []
+        fsmArrayParams: []
+        fsmEnumParams: []
+        fsmFloatParams: []
+        fsmIntParams: []
+        fsmBoolParams: []
+        fsmVector2Params: []
+        fsmVector3Params: []
+        fsmColorParams: []
+        fsmRectParams: []
+        fsmQuaternionParams: []
+        stringParams: []
+        byteData: 536f6d6520706c6174666f726d73206c696b65207468652077656220706c6179657220616e6420636f6e736f6c6573206c61636b206120636f6e76656e74696f6e616c2066696c652073797374656d2e2020496620796f75277265207573696e672074686573652c20536d6f6f746820536176652063616e277420736176652066696c657320696e2074686520757375616c206d616e6e65722e496e2074686973206576656e742c20796f752063616e2075736520746865202255736520506c6179657250726566732220616374696f6e2e2020596f75206f6e6c79206e65656420746f20757365206974206f6e63652c2062757420796f75206d75737420757365206974206265666f726520616e79206f7468657220536d6f6f7468205361766520616374696f6e2e0100546869732077696c6c2073617665206461746120617320584d4c20616e642073746f726520697420696e206120737472696e6720696e20506c6179657250726566732e20205468697320697320612062697420736c6f77657220616e642075736573206120626974206d6f7265206d656d6f72792c206275742069742073686f756c6420776f726b206f6e20616e7920706c6174666f726d2e596f752063616e207573652022456e636f646520446174612220746f206d616b652069742063686561742d726573697374616e742c206275742069742075736573206d6f7265206d656d6f72792e
+        arrayParamSizes: 
+        arrayParamTypes: []
+        customTypeSizes: 
+        customTypeNames: []
+        paramDataType: 0300000003000000110000000300000003000000
+        paramName:
+        - comment
+        - comment
+        - EncodeData
+        - comment
+        - comment
+        paramDataPos: 000000009a0000002a0100002c010000c5010000
+        paramByteDataSize: 9a0000009000000002000000990000004e000000
+    events:
+    - name: First Run
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: No Pool
+      isSystemEvent: 0
+      isGlobal: 0
+    - name: Save Failure
+      isSystemEvent: 0
+      isGlobal: 0
+    globalTransitions: []
+    variables:
+      floatVariables:
+      - useVariable: 1
+        name: My Float
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      intVariables:
+      - useVariable: 1
+        name: Ammo Current
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Ammo Start
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: My Int
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Player Health
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Pool ID
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      - useVariable: 1
+        name: Pool Size
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      boolVariables:
+      - useVariable: 1
+        name: My Bool
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 0
+      stringVariables:
+      - useVariable: 1
+        name: My String
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 
+      - useVariable: 1
+        name: Pool Name
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: 
+      vector2Variables:
+      - useVariable: 1
+        name: My Vector2
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0}
+      vector3Variables:
+      - useVariable: 1
+        name: My Vector3
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0}
+      colorVariables:
+      - useVariable: 1
+        name: My Color
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {r: 0, g: 0, b: 0, a: 1}
+      rectVariables:
+      - useVariable: 1
+        name: My Rect
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+      quaternionVariables:
+      - useVariable: 1
+        name: My Quaternion
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0, y: 0, z: 0, w: 0}
+      gameObjectVariables:
+      - useVariable: 1
+        name: My GameObject
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {fileID: 0}
+      objectVariables: []
+      materialVariables: []
+      textureVariables: []
+      arrayVariables: []
+      enumVariables: []
+      categories:
+      - 
+      variableCategoryIDs: 
+    description: 
+    docUrl: 
+    showStateLabel: 1
+    maxLoopCount: 0
+    watermark: 
+    password: 
+    locked: 0
+    manualUpdate: 0
+    keepDelayedEventsOnStateExit: 0
+    preprocessed: 0
+    ExposedEvents: []
+    RestartOnEnable: 1
+    EnableDebugFlow: 0
+    EnableBreakpoints: 1
+    editorFlags: 1
+    activeStateName: 
+    mouseEvents: 0
+    handleLevelLoaded: 0
+    handleTriggerEnter2D: 0
+    handleTriggerExit2D: 0
+    handleTriggerStay2D: 0
+    handleCollisionEnter2D: 0
+    handleCollisionExit2D: 0
+    handleCollisionStay2D: 0
+    handleTriggerEnter: 0
+    handleTriggerExit: 0
+    handleTriggerStay: 0
+    handleCollisionEnter: 0
+    handleCollisionExit: 0
+    handleCollisionStay: 0
+    handleParticleCollision: 0
+    handleControllerColliderHit: 0
+    handleJointBreak: 0
+    handleJointBreak2D: 0
+    handleOnGUI: 0
+    handleFixedUpdate: 0
+    handleLateUpdate: 0
+    handleApplicationEvents: 0
+    handleUiEvents: 0
+    handleLegacyNetworking: 0
+    handleAnimatorMove: 0
+    handleAnimatorIK: 0
+  fsmTemplate: {fileID: 0}
+  eventHandlerComponentsAdded: 0
+--- !u!102 &58155197
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58155195}
+  m_Text: Look at the FSM to learn how to use Smooth Save.  :)
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 4
+  m_Alignment: 1
+  m_TabSize: 4
+  m_FontSize: 32
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
+--- !u!23 &58155198
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58155195}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!4 &58155199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58155195}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1972512884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1972512889}
+  - component: {fileID: 1972512888}
+  - component: {fileID: 1972512887}
+  - component: {fileID: 1972512886}
+  - component: {fileID: 1972512885}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!81 &1972512885
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972512884}
+  m_Enabled: 1
+--- !u!124 &1972512886
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972512884}
+  m_Enabled: 1
+--- !u!92 &1972512887
+Behaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972512884}
+  m_Enabled: 1
+--- !u!20 &1972512888
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972512884}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0.019607844}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_FocalLength: 50
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 5
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 3
+  m_HDR: 0
+  m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 1
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &1972512889
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972512884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

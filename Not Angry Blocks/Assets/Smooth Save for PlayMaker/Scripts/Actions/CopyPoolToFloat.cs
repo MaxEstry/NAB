@@ -1,0 +1,38 @@
+﻿/*
+*  Smooth Save for PlayMaker
+*
+*  Copyright 2015 Christopher Stanley
+*
+*  Documentation: "Smooth Save Manual.pdf"
+*
+*  Support: support@ChristopherCreates.com
+*/
+
+
+using ChristopherCreates.SmoothSave;
+
+namespace HutongGames.PlayMaker.Actions
+{
+	[ActionCategory("Smooth Save")]
+	[Tooltip("Copies data from the pool to a Float variable.")]
+	public class CopyPoolToFloat : SSKeyData
+	{
+		[RequiredField]
+		[UIHint(UIHint.Variable)]
+		[Tooltip("Copy data from the pool to this variable.")]
+		public FsmFloat Float;
+
+
+		public override void Reset()
+		{
+			Float = null;
+			base.Reset();
+		}
+
+
+		public override void OnEnter()
+		{
+			FailEventOrFinish(DoVariableAction(VariableAction.CopyPoolToVariable, Float, Key.Value), DataNotFoundEvent);
+		}
+	}
+}

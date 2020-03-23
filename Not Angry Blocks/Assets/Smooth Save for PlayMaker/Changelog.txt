@@ -1,0 +1,38 @@
+1.2.2
+2016-09-16
+Removed configuration menu, incompatible with Unity 5.4
+Made PlayMaker 1.8 the default configuration
+Placed PlayMaker 1.7 files in PlayMaker1_7.zip
+
+1.2.1
+2016-06-02
+Fixed missing Editor folder for SmoothSaveConfigure.cs
+Fixed "One-Action FSM" example scene
+Changed minimum Unity version to 4.6.0
+
+1.2.0
+2016-01-14
+Added "PlayMaker/Smooth Save/Configure..." menu.  This must be used to enable PlayMaker 1.8 support!
+Added Array and Enum variable support with PlayMaker 1.8
+Fixed compiler warnings with PlayMaker 1.8
+Fixed error handling of loading data pools that do not exist
+Fixed "File Not Found" event in "Delete Data Pool"
+Fixed compiler warnings with Unity 5.3
+
+1.1.1
+2015-11-09
+Fixed NullReferenceException when saving or loading a GameObject variable set to None
+Added example scenes
+
+1.1.0
+2015-10-19
+Added "Use PlayerPrefs" action; Flags XML fallback for unconventional/missing file systems
+Added "Not Loaded Event" to "Save Data Pool"
+Added data check on pool load, will call File Error Event on corrupted data
+Added exception on default data pool creation failure
+Fixed exception on saving null data pool
+Suppressed empty pool warning on automatic load
+
+1.0.0
+2015-09-23
+First release

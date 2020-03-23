@@ -1,0 +1,3 @@
+Enabling PlayMaker 1.7 Support
+
+By default, Smooth Save is configured for PlayMaker 1.8. If you want to use it with 1.7, just delete the Scripts folder and extract the replacement from PlayMaker1_7.zip.
