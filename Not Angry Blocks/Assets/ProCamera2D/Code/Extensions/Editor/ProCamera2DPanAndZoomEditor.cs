@@ -116,6 +116,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 				if (proCamera2DPanAndZoom.UsePanByDrag)
 				{
 					EditorGUI.indentLevel = 2;
+					
+					// Min Pan Amount
+					_tooltip = new GUIContent("Min Pan Amount", "What's the minimum pan amount (in screen size percentage) that can trigger the pan movement? Consider it like a dead zone.");
+					EditorGUILayout.PropertyField(serializedObject.FindProperty("MinPanAmount"), _tooltip);
+					
 					// Pan mouse button
 					_tooltip = new GUIContent("Drag Mouse Button", "Which mouse button do you want to use for panning? Only applicable if mouse is used");
 					EditorGUILayout.PropertyField(serializedObject.FindProperty("PanMouseButton"), _tooltip);
@@ -194,6 +199,12 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
 			if (proCamera2DPanAndZoom.DraggableAreaRect.y > .5f)
 				proCamera2DPanAndZoom.DraggableAreaRect.y = .5f;
+			
+			if (proCamera2DPanAndZoom.MinPanAmount < 0f)
+				proCamera2DPanAndZoom.MinPanAmount = 0f;
+			
+			if (proCamera2DPanAndZoom.MinPanAmount > 1f)
+				proCamera2DPanAndZoom.MinPanAmount = 1f;
 
 			// Warning
 			if (!proCamera2DPanAndZoom.AllowPan && !proCamera2DPanAndZoom.AllowZoom)

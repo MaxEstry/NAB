@@ -62,3 +62,6 @@ TagManager:
   - name: enemy
     uniqueID: 2215315661
     locked: 0
+  - name: tickets
+    uniqueID: 3140682813
+    locked: 0

@@ -32,11 +32,6 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
         private void OnEnable()
         {
-            if (!SystemInfo.supportsImageEffects)
-            {
-                enabled = false;
-            }
-            
             _previousAmount = float.MaxValue;
             
             if(TopPropertyID == 0)

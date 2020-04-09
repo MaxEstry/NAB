@@ -37,6 +37,21 @@ Twitter - http://www.twitter.com/lpfonseca
 
 ## CHANGELOG ##
 
+2.7.0
+- Core - Support for the latest Unity version - 2019.3.1f1
+- PanAndZoom - Fixed pan smoothness not automatically resetting after a zoom movement
+- Timeline - Moved timeline related scripts to a .unitypackage to avoid conflicts in case the user doesn't have the Unity Timeline package 
+
+2.6.12
+- PanAndZoom - Added support for a "dead-zone" that prevents unwanted pan movements
+
+2.6.11
+- Cinematics - Fixed numeric boundaries not being taken into consideration on return
+
+2.6.10
+- Core - Updated support for Unity 2019.x
+- Rooms - Improved support of multiple cameras and multiple Rooms extensions
+
 2.6.9
 - Added support for Unity 2019.1
 - PanAndZoom - Mark the pan target object as DontDestroyOnLoad if the extension is also marked

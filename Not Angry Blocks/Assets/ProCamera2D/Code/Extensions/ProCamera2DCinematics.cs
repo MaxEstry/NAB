@@ -397,9 +397,6 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 					var originalPosH = Vector3H(_originalPos);
 					var originalPosV = Vector3V(_originalPos);
 
-					if (_numericBoundariesPreviousState)
-						LimitToNumericBoundaries(ref originalPosH, ref originalPosV);
-
 					float newPosH = 0f;
 					float newPosV = 0f;
 					if (ProCamera2D.CameraTargets.Count > 0)
@@ -412,6 +409,9 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 						newPosH = Utils.EaseFromTo(initialPosH, Vector3H(_startPos), t, EndEaseType);
 						newPosV = Utils.EaseFromTo(initialPosV, Vector3V(_startPos), t, EndEaseType);
 					}
+					
+					if (_numericBoundariesPreviousState)
+						LimitToNumericBoundaries(ref newPosH, ref newPosV);
 
 					_newPos = VectorHVD(newPosH, newPosV, 0);
 

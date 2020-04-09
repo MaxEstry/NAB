@@ -22,6 +22,8 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 		[Range(0.1f, 10f)]
 		public float ZoomScale;
 
+		public int InternalID;
+
 		public Room(Room otherRoom)
 		{
 			Dimensions = otherRoom.Dimensions;
@@ -53,13 +55,13 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 		{
 			get { return _currentRoomIndex; }
 		}
-		static int _currentRoomIndex = -1;
+		private int _currentRoomIndex = -1;
 
 		public int PreviousRoomIndex
 		{
 			get { return _previousRoomIndex; }
 		}
-		static int _previousRoomIndex = -1;
+		private int _previousRoomIndex = -1;
 
 		public Room CurrentRoom
 		{
@@ -97,14 +99,11 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
 		Coroutine _transitionRoutine;
 
-		private int _instanceID;
-		private static int _currentInstanceID;
+		private int _currentRoomID = -1;
 
 		override protected void Awake()
 		{
 			base.Awake();
-
-			_instanceID = GetInstanceID();
 
 			_numericBoundaries = ProCamera2D.GetComponent<ProCamera2DNumericBoundaries>();
 			_defaultNumericBoundariesSettings = _numericBoundaries.Settings;
@@ -117,6 +116,14 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
 		void Start()
 		{
+			var instanceID = GetInstanceID();
+			var count = 0;
+			foreach (var room in Rooms)
+			{
+				room.InternalID = instanceID + count;
+				count++;
+			}
+			
 			StartCoroutine(TestRoomRoutine());
 
 			if (TransitionInstanlyOnStart)
@@ -190,8 +197,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 
 			var roomToEnter = ComputeCurrentRoom(targetPos);
 			
-			if (roomToEnter != -1 && 
-			    (_currentRoomIndex != roomToEnter || _instanceID != _currentInstanceID))
+			if (roomToEnter != -1 && _currentRoomIndex != roomToEnter)
 			{
 				EnterRoom(roomToEnter);
 			}
@@ -238,13 +244,13 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 			if (roomIndex < 0 || roomIndex > Rooms.Count - 1)
 				throw new System.Exception("Can't find room with index: " + roomIndex);
 
-			if (!forceEntrance && roomIndex == _currentRoomIndex && _instanceID == _currentInstanceID)
+			if (!forceEntrance && Rooms[roomIndex].InternalID == _currentRoomID)
 				return;
 
 			_previousRoomIndex = _currentRoomIndex;
 			_currentRoomIndex = roomIndex;
-
-			_currentInstanceID = _instanceID;
+			
+			_currentRoomID = Rooms[roomIndex].InternalID;
 
 			TransitionToRoom(Rooms[_currentRoomIndex], useTransition);
 
@@ -273,10 +279,10 @@ namespace Com.LuisPedroFonseca.ProCamera2D
 		/// </summary>
 		public void ExitRoom()
 		{
+			_currentRoomIndex = -1;
+			_currentRoomID = -1;
 			if (RestoreOnRoomExit)
 			{
-				_currentRoomIndex = -1;
-
 				if (OnStartedTransition != null)
 					OnStartedTransition.Invoke(_currentRoomIndex, _previousRoomIndex);
 

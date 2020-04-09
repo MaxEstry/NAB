@@ -1,10 +1,14 @@
-﻿using UnityEditor;
+﻿using System.Collections.Generic;
+using System.IO;
+using UnityEditor;
 using UnityEngine;
 
+#if !UNITY_2018_3_OR_NEWER
 namespace Com.LuisPedroFonseca.ProCamera2D
 {
     public static class ProCamera2DPrefs
     {	
+	    
     	static bool _prefsLoaded;
 
         static Color[] _procamera2DGizmosColors;
@@ -76,7 +80,7 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         };
 
         static Vector2 _scrollPos;
-	
+
         [PreferenceItem("ProCamera2D")]
         static void PreferencesGUI()
         {
@@ -149,3 +153,4 @@ namespace Com.LuisPedroFonseca.ProCamera2D
         }
     }
 }
+#endif

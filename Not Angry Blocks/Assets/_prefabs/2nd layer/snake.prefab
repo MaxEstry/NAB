@@ -582,6 +582,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -8305,11 +8306,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7846966450850091225}
     m_Modifications:
-    - target: {fileID: 7692125726212877822, guid: 662a4eb735027484d94f92ce21912194,
-        type: 3}
-      propertyPath: m_Name
-      value: pin
-      objectReference: {fileID: 0}
     - target: {fileID: 156939419637547744, guid: 662a4eb735027484d94f92ce21912194,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8364,6 +8360,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7692125726212877822, guid: 662a4eb735027484d94f92ce21912194,
+        type: 3}
+      propertyPath: m_Name
+      value: pin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 662a4eb735027484d94f92ce21912194, type: 3}

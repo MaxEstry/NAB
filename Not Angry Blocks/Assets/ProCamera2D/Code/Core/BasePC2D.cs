@@ -10,8 +10,10 @@ namespace Com.LuisPedroFonseca.ProCamera2D
             get
             {
                 if (_pc2D != null) return _pc2D;
-
-                if (Camera.main != null)
+                
+                _pc2D = GetComponent<ProCamera2D>();
+                    
+                if (_pc2D == null && Camera.main != null)
                     _pc2D = Camera.main.GetComponent<ProCamera2D>();
                 
                 if (_pc2D == null)
