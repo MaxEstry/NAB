@@ -141,6 +141,24 @@ MonoBehaviour:
       showInInspector: 0
       networkSync: 0
       value: 8
+    - useVariable: 1
+      name: child_coin_global
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: best_score
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
+    - useVariable: 1
+      name: levels_played
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: 0
     boolVariables:
     - useVariable: 1
       name: discount
@@ -211,6 +229,12 @@ MonoBehaviour:
       value: {fileID: 0}
     - useVariable: 1
       name: maincamera
+      tooltip: 
+      showInInspector: 0
+      networkSync: 0
+      value: {fileID: 0}
+    - useVariable: 1
+      name: CCP
       tooltip: 
       showInInspector: 0
       networkSync: 0
@@ -291,7 +315,7 @@ MonoBehaviour:
     - itemsystem
     - movearound
     - setupper
-    variableCategoryIDs: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    variableCategoryIDs: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   events:
   - build
   - hello
@@ -327,3 +351,4 @@ MonoBehaviour:
   - fullpayment
   - reroll
   - toggle_sound_mng
+  - createlevel

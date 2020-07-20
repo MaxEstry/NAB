@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 2276144342479169300}
   - component: {fileID: 1061540694728604195}
   - component: {fileID: 7903664261773049842}
+  - component: {fileID: -8584261453280508722}
   m_Layer: 9
   m_Name: 3ark
   m_TagString: fracturable
@@ -11243,8 +11244,8 @@ MonoBehaviour:
   alphaHeight: 67
   alphaCount: 2907
   originalAlphaCount: 2907
-  alphaOffset: {x: -3.3148286, y: -2.674786}
-  alphaScale: {x: 6.6296573, y: 5.349572}
+  alphaOffset: {x: -2.58971, y: -0.08967656}
+  alphaScale: {x: 5.17942, y: 4.179353}
   alphaSharpness: 8
   shape: {fileID: 21300000, guid: 87090ff82f54e094eb2ed1a754d976d8, type: 3}
   channels: 0
@@ -12272,6 +12273,18 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
+--- !u!114 &-8584261453280508722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7945128049202454542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebc5912d6280634d8b8f89f48ae3e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7945128050810020723
 GameObject:
   m_ObjectHideFlags: 0
@@ -12324,8 +12337,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7945128050810020723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.274891, y: -2.6348639, z: 0}
-  m_LocalScale: {x: 0.00031323681, y: 0.00031311516, z: 1}
+  m_LocalPosition: {x: -2.5585086, y: -0.058487356, z: 0}
+  m_LocalScale: {x: 0.00024471627, y: 0.00024462122, z: 1}
   m_Children: []
   m_Father: {fileID: 7945128049202454556}
   m_RootOrder: 0
