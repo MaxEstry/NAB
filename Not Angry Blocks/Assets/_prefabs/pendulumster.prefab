@@ -48,6 +48,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -472,6 +473,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -556,6 +558,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2309,6 +2312,8 @@ GameObject:
   - component: {fileID: 8638107609068365731}
   - component: {fileID: 3491853887273875603}
   - component: {fileID: 8347009267211480303}
+  - component: {fileID: 3853053719464382200}
+  - component: {fileID: 5391558022872864005}
   m_Layer: 20
   m_Name: Collider
   m_TagString: Untagged
@@ -2363,6 +2368,10 @@ EdgeCollider2D:
   - {x: 2040, y: 382}
   - {x: 1785, y: 329}
   - {x: 1530, y: 490}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!68 &8399799891280203241
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2392,6 +2401,10 @@ EdgeCollider2D:
   - {x: 2089, y: 2040}
   - {x: 2057, y: 1785}
   - {x: 2224, y: 1530}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!68 &596464565036007813
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2424,6 +2437,10 @@ EdgeCollider2D:
   - {x: 7905, y: 1714}
   - {x: 7905, y: 765}
   - {x: 7905, y: 698}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!68 &2578489049500078476
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2466,6 +2483,10 @@ EdgeCollider2D:
   - {x: 4557, y: 2040}
   - {x: 4590, y: 2001}
   - {x: 4821, y: 1785}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!68 &7157284688373938046
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2510,6 +2531,10 @@ EdgeCollider2D:
   - {x: 8925, y: 329}
   - {x: 8670, y: 382}
   - {x: 8415, y: 497}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!68 &8638107609068365731
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2533,6 +2558,10 @@ EdgeCollider2D:
   - {x: 3825, y: 3825}
   - {x: 3315, y: 3825}
   - {x: 3060, y: 3825}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!68 &3491853887273875603
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -2559,6 +2588,10 @@ EdgeCollider2D:
   - {x: 7675, y: 3825}
   - {x: 4080, y: 3825}
   - {x: 3825, y: 3825}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!114 &8347009267211480303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2948,9 +2981,9 @@ MonoBehaviour:
     handleTriggerEnter2D: 0
     handleTriggerExit2D: 0
     handleTriggerStay2D: 0
-    handleCollisionEnter2D: 0
+    handleCollisionEnter2D: 1
     handleCollisionExit2D: 0
-    handleCollisionStay2D: 0
+    handleCollisionStay2D: 1
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0
@@ -2971,3 +3004,31 @@ MonoBehaviour:
     handleAnimatorIK: 0
   fsmTemplate: {fileID: 0}
   eventHandlerComponentsAdded: 1
+--- !u!114 &3853053719464382200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8347009267211480302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -967985445, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 8347009267211480303}
+--- !u!114 &5391558022872864005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8347009267211480302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1892084408, guid: e743331561ef77147ae48cda9bcb8209, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TargetFSMs:
+  - {fileID: 8347009267211480303}

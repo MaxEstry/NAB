@@ -787,6 +787,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -9829,7 +9830,7 @@ MonoBehaviour:
   cropSprite: 1
   rebuildInGame: 0
   rebuildOptimizeCount: 0
-  originalSprite: {fileID: 21300000, guid: e48692c89039ba646a496b5fd177026a, type: 3}
+  originalSprite: {fileID: 21300000, guid: e3d94163914f72743a6fadca99fd15f5, type: 3}
   clonedSprite: {fileID: 0}
 --- !u!114 &1038734479704819392
 MonoBehaviour:
@@ -10206,6 +10207,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1038734479704819419}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -10333,6 +10335,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1270859680992554154}
+        m_TargetAssemblyTypeName: 
         m_MethodName: set_enabled
         m_Mode: 6
         m_Arguments:
@@ -10386,6 +10389,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 4223276576383881588}
+        m_TargetAssemblyTypeName: 
         m_MethodName: SendEvent
         m_Mode: 5
         m_Arguments:
