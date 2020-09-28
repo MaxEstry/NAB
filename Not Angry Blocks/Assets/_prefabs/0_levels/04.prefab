@@ -339,12 +339,12 @@ PrefabInstance:
     - target: {fileID: 7645483464013348023, guid: 31b06b03de1768946b64e5ef4fd51261,
         type: 3}
       propertyPath: m_Size.x
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7645483464013348023, guid: 31b06b03de1768946b64e5ef4fd51261,
         type: 3}
       propertyPath: m_Size.y
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7645483464013348023, guid: 31b06b03de1768946b64e5ef4fd51261,
         type: 3}

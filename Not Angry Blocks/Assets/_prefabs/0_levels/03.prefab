@@ -2291,6 +2291,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7945128049202454531, guid: 352729623950a1b45adae3106583935b,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.0078125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7945128049202454531, guid: 352729623950a1b45adae3106583935b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.0078125
+      objectReference: {fileID: 0}
     - target: {fileID: 7945128049202454542, guid: 352729623950a1b45adae3106583935b,
         type: 3}
       propertyPath: m_Name
