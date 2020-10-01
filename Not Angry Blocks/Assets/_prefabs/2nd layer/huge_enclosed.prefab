@@ -26805,7 +26805,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 984.48
+  m_Mass: 98.448006
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -26838,7 +26838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c5f1e1730d93a4880c460394961c48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  massPerSolidPixel: 0.01
+  massPerSolidPixel: 0.001
   factorInSharpness: 1
 --- !u!114 &7945128049202454532
 MonoBehaviour:
@@ -26913,9 +26913,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  damageRequired: 44
+  damageRequired: 26
   damageMultiplier: 2
-  pointsPerSolidPixel: 0.00004
+  pointsPerSolidPixel: 0.00008
   factorInSharpness: 1
   splitAfterFracture: 1
   splitFeather: 3
@@ -27058,7 +27058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
-  damageMin: 44
+  damageMin: 26
   damageMax: 1000
   alphaCount: 0
   alphaCountMin: 0
@@ -27193,7 +27193,7 @@ MonoBehaviour:
           tooltip: 
           showInInspector: 0
           networkSync: 0
-          value: {fileID: 9150245979870871389, guid: 7e122b2eb2fb8b64598edc2c97c1e586,
+          value: {fileID: 9150245979870871389, guid: 8658edf413ffc7342a62eaab9dbdd252,
             type: 3}
         - useVariable: 1
           name: 
@@ -27368,7 +27368,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
