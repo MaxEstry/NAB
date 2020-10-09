@@ -1708,6 +1708,7 @@ MonoBehaviour:
         colorIndex: 0
       actionData:
         actionNames:
+        - HutongGames.PlayMaker.Actions.AddForce2d
         - HutongGames.PlayMaker.Actions.Rotate
         - HutongGames.PlayMaker.Actions.SetProperty
         - HutongGames.PlayMaker.Actions.ActivateGameObject
@@ -1719,13 +1720,22 @@ MonoBehaviour:
         - 
         - 
         - 
-        actionEnabled: 0100010101
-        actionIsOpen: 0101010101
-        actionStartIndex: 000000000a0000000c0000001100000021000000
-        actionHashCodes: b03274005ac85204b2cf100055046d0448c01101
+        - 
+        actionEnabled: 010000010101
+        actionIsOpen: 010101010101
+        actionStartIndex: 000000000800000012000000140000001900000029000000
+        actionHashCodes: d596ab02b03274005ac85204b2cf100055046d0448c01101
         unityObjectParams: []
         fsmGameObjectParams: []
         fsmOwnerDefaultParams:
+        - ownerOption: 0
+          gameObject:
+            useVariable: 0
+            name: 
+            tooltip: 
+            showInInspector: 0
+            networkSync: 0
+            value: {fileID: 0}
         - ownerOption: 0
           gameObject:
             useVariable: 0
@@ -1929,6 +1939,18 @@ MonoBehaviour:
         fsmArrayParams: []
         fsmEnumParams: []
         fsmFloatParams:
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 350
+        - useVariable: 0
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: 350
         - useVariable: 1
           name: 
           tooltip: 
@@ -2009,8 +2031,26 @@ MonoBehaviour:
           showInInspector: 0
           networkSync: 0
           value: 0
-        fsmVector2Params: []
+        fsmVector2Params:
+        - useVariable: 1
+          name: force_pos
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0.23, y: 0.69}
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0}
         fsmVector3Params:
+        - useVariable: 1
+          name: 
+          tooltip: 
+          showInInspector: 0
+          networkSync: 0
+          value: {x: 0, y: 0, z: 0}
         - useVariable: 1
           name: 
           tooltip: 
@@ -2028,15 +2068,23 @@ MonoBehaviour:
         fsmQuaternionParams: []
         stringParams:
         - FINISHED
-        byteData: 010000000101000000000000
+        byteData: 0000000001010000000101000000000000
         arrayParamSizes: 0500000005000000
         arrayParamTypes:
         - HutongGames.PlayMaker.FsmObject
         - HutongGames.PlayMaker.FsmFloat
         customTypeSizes: 
         customTypeNames: []
-        paramDataType: 140000001c0000000f0000000f0000000f000000070000000100000001000000010000000100000024000000010000001400000011000000110000000100000001000000140000001c0000000c00000018000000180000001800000018000000180000000c0000000f0000000f0000000f0000000f0000000f0000000f000000110000000f0000001700000001000000
+        paramDataType: 140000000700000025000000250000000f0000000f0000001c00000001000000140000001c0000000f0000000f0000000f000000070000000100000001000000010000000100000024000000010000001400000011000000110000000100000001000000140000001c0000000c00000018000000180000001800000018000000180000000c0000000f0000000f0000000f0000000f0000000f0000000f000000110000000f0000001700000001000000
         paramName:
+        - gameObject
+        - forceMode
+        - atPosition
+        - vector
+        - x
+        - y
+        - vector3
+        - everyFrame
         - gameObject
         - vector
         - xAngle
@@ -2073,8 +2121,8 @@ MonoBehaviour:
         - time
         - finishEvent
         - realTime
-        paramDataPos: 000000000000000000000000010000000200000000000000040000000500000006000000070000000000000008000000010000000000000001000000090000000a0000000200000001000000000000000000000001000000020000000300000004000000010000000300000004000000050000000600000007000000080000000200000009000000000000000b000000
-        paramByteDataSize: 000000000000000000000000000000000000000004000000010000000100000001000000010000000000000001000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
+        paramDataPos: 0000000000000000000000000100000000000000010000000000000004000000010000000100000002000000030000000400000005000000090000000a0000000b0000000c000000000000000d0000000200000000000000010000000e0000000f00000003000000020000000000000000000000010000000200000003000000040000000100000005000000060000000700000008000000090000000a000000020000000b0000000000000010000000
+        paramByteDataSize: 0000000004000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000004000000010000000100000001000000010000000000000001000000000000000000000000000000010000000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000
     - name: click
       description: 
       colorIndex: 0
@@ -2187,7 +2235,13 @@ MonoBehaviour:
       intVariables: []
       boolVariables: []
       stringVariables: []
-      vector2Variables: []
+      vector2Variables:
+      - useVariable: 1
+        name: force_pos
+        tooltip: 
+        showInInspector: 0
+        networkSync: 0
+        value: {x: 0.23, y: 0.69}
       vector3Variables:
       - useVariable: 1
         name: spawn_pos
@@ -2206,7 +2260,7 @@ MonoBehaviour:
       enumVariables: []
       categories:
       - 
-      variableCategoryIDs: 0000000000000000
+      variableCategoryIDs: 000000000000000000000000
     description: 
     docUrl: 
     showStateLabel: 0
@@ -2216,7 +2270,7 @@ MonoBehaviour:
     locked: 0
     manualUpdate: 0
     keepDelayedEventsOnStateExit: 0
-    preprocessed: 1
+    preprocessed: 0
     ExposedEvents: []
     RestartOnEnable: 1
     EnableDebugFlow: 0
