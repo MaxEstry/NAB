@@ -454,22 +454,22 @@ PrefabInstance:
     - target: {fileID: 1938684277707636711, guid: 90a9c9e1afe03ee4b93387f9bd85b3aa,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1938684277707636711, guid: 90a9c9e1afe03ee4b93387f9bd85b3aa,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1938684277707636711, guid: 90a9c9e1afe03ee4b93387f9bd85b3aa,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1938684277707636711, guid: 90a9c9e1afe03ee4b93387f9bd85b3aa,
         type: 3}
       propertyPath: m_textInfo.pageCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1938684277707636711, guid: 90a9c9e1afe03ee4b93387f9bd85b3aa,
         type: 3}
@@ -490,6 +490,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textAlignment
       value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 1938684277707636711, guid: 90a9c9e1afe03ee4b93387f9bd85b3aa,
+        type: 3}
+      propertyPath: m_TextStyleHashCode
+      value: -1183493901
       objectReference: {fileID: 0}
     - target: {fileID: 1938684277707636713, guid: 90a9c9e1afe03ee4b93387f9bd85b3aa,
         type: 3}
