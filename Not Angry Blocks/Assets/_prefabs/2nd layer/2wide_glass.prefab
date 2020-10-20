@@ -1697,7 +1697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   damageRequired: 26
-  damageMultiplier: 2
+  damageMultiplier: 8
   pointsPerSolidPixel: 0.0003
   factorInSharpness: 1
   splitAfterFracture: 1
