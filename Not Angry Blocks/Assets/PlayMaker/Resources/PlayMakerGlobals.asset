@@ -387,3 +387,4 @@ MonoBehaviour:
   - kickCoin
   - restart_cuzblock
   - purchase
+  - openLink
