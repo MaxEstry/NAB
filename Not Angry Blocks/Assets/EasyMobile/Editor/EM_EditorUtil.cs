@@ -851,9 +851,13 @@ namespace EasyMobile.Editor
         /// <returns>The jdk path.</returns>
         public static string GetJdkPath(bool verboseLog = false)
         {
-            var jdkPath = UnityEditor.EditorPrefs.GetString("JdkPath");
+#if UNITY_ANDROID && UNITY_2019_3_OR_NEWER
+            var jdkPath = UnityEditor.Android.AndroidExternalToolsSettings.jdkRootPath;
+#else
+            var jdkPath = string.Empty; // we'll use JAVA_HOME
+#endif
 
-            if (string.IsNullOrEmpty(jdkPath))
+            if (string.IsNullOrEmpty(jdkPath) || !System.IO.Directory.Exists(jdkPath))
             {
                 if (verboseLog)
                     Debug.Log(

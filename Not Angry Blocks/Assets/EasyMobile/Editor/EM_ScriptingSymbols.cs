@@ -24,6 +24,7 @@ namespace EasyMobile.Editor
         public const string FBAudience = "EM_FBAN";
         public const string IronSource = "EM_IRONSOURCE";
         public const string TapJoy = "EM_TAPJOY";
+        public const string UnityAds = "EM_UNITY_ADS";
         public const string UnityMonetization = "UNITY_MONETIZATION";
     }
 }

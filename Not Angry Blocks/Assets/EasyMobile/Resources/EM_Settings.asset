@@ -242,7 +242,14 @@ MonoBehaviour:
     mEnableAmazonSandboxTesting: 0
     mValidateAppleReceipt: 0
     mValidateGooglePlayReceipt: 0
-    mProducts: []
+    mProducts:
+    - _name: 80 gold
+      _type: 0
+      _id: 80gold
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
   mNotificationSettings:
     mAutoInit: 1
     mAutoInitDelay: 0
@@ -340,4 +347,4 @@ MonoBehaviour:
   mIsNotificationModuleEnable: 0
   mIsSharingModuleEnable: 0
   mActiveModuleIndex: 3
-  mIsSelectingModule: 0
+  mIsSelectingModule: 1

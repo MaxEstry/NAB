@@ -388,3 +388,9 @@ MonoBehaviour:
   - restart_cuzblock
   - purchase
   - openLink
+  - donePurchase
+  - failPurchase
+  - closeGoldGuide
+  - closePlayGuide
+  - openGoldGuide
+  - openPlayGuide

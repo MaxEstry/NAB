@@ -116,16 +116,16 @@ namespace EasyMobile.Internal.NativeAPIs.Contacts
                 Func<IntPtr, CNPhoneNumber> valueConstructor = ptr => new CNPhoneNumber(ptr);
                 CNPhoneNumber number = labeledValue.GetValue(valueConstructor);
                 NSString label = labeledValue.Label;
-
-                if (label == null || number == null)
+                if(number == null)
                 {
-                    Debug.LogFormat("Detected null value in [CNLabeledValue<CNPhoneNumber>] -> [{0}, {1}].",
-                        label != null ? label.UTF8String : "null",
-                        number != null ? number.StringValue.UTF8String : "null");
+                    Debug.LogFormat("Detected null number value in [CNLabeledValue<CNPhoneNumber>] -> label:{0}.",
+                        label != null ? label.UTF8String : "null");
                     continue;
                 }
+                var labelStr = label != null ? label.UTF8String : "null";
+                var numberStr = number != null ? number.StringValue.UTF8String : "null";
 
-                result.Add(new KeyValuePair<string, string>(label.UTF8String, number.StringValue.UTF8String));
+                result.Add(new KeyValuePair<string, string>(labelStr, numberStr));
             }
 
             return result.ToArray();

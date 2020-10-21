@@ -25,6 +25,14 @@ namespace EasyMobile.Internal.StoreReview.Android
                 settings.MinimumAcceptedStars.ToString()
             );
         }
+
+        internal static void RequestStoreReview(string callbackObject, string callbackMethod)
+        {
+            AndroidUtil.CallJavaStaticMethod(ANDROID_JAVA_UTILITY_CLASS, "RequestStoreReview",
+                callbackObject,
+                callbackMethod
+            );
+        }
     }
 }
 #endif

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace EasyMobile
 {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
     using UnityEngine.Advertisements;
 #endif
 
@@ -14,13 +14,13 @@ namespace EasyMobile
         private const string NO_SDK_MESSAGE = "SDK missing. Please enable UnityAds service.";
         private const string BANNER_UNSUPPORTED_MESSAGE = "This version of UnityAds package does not support banner ad format.";
 
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
         private UnityAdsSettings mAdSettings;
 #endif
 
         #region UnityAds Events
 
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
         /// <summary>
         /// Occurs when a banner ad is shown.
         /// </summary>
@@ -92,7 +92,7 @@ namespace EasyMobile
         {
             get
             {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
                 return mIsInitialized && Advertisement.isInitialized;
 #else
 				return mIsInitialized;
@@ -104,7 +104,7 @@ namespace EasyMobile
         {
             get
             {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
                 return mAdSettings == null ? null : mAdSettings.CustomInterstitialAdIds;
 #else
 				return null;
@@ -116,7 +116,7 @@ namespace EasyMobile
         {
             get
             {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
                 return mAdSettings == null ? null : mAdSettings.CustomRewardedAdIds;
 #else
 				return null;
@@ -130,7 +130,7 @@ namespace EasyMobile
         {
             get
             {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
                 return true;
 #else
 				return false;
@@ -140,7 +140,7 @@ namespace EasyMobile
 
         public override bool IsValidPlacement(AdPlacement placement, AdType type)
         {
-#if UNITY_ADS
+#if EM_UNITY_ADS
             string id;
             if (placement == AdPlacement.Default)
             {
@@ -182,7 +182,7 @@ namespace EasyMobile
 
         protected override void InternalInit()
         {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
             if (!mIsInitialized)
             {
                 mIsInitialized = true;
@@ -294,7 +294,7 @@ namespace EasyMobile
 
         protected override bool InternalIsInterstitialAdReady(AdPlacement placement)
         {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
             string placementId = placement == AdPlacement.Default ?
                 mAdSettings.DefaultInterstitialAdId.Id : FindIdForPlacement(mAdSettings.CustomInterstitialAdIds, placement);
 
@@ -309,7 +309,7 @@ namespace EasyMobile
 
         protected override void InternalShowInterstitialAd(AdPlacement placement)
         {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
             string id = placement == AdPlacement.Default ?
                 mAdSettings.DefaultInterstitialAdId.Id : FindIdForPlacement(mAdSettings.CustomInterstitialAdIds, placement);
 
@@ -347,7 +347,7 @@ namespace EasyMobile
 
         protected override bool InternalIsRewardedAdReady(AdPlacement placement)
         {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
             string placementId = placement == AdPlacement.Default ?
                 mAdSettings.DefaultRewardedAdId.Id : FindIdForPlacement(mAdSettings.CustomRewardedAdIds, placement);
 
@@ -362,7 +362,7 @@ namespace EasyMobile
 
         protected override void InternalShowRewardedAd(AdPlacement placement)
         {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
             string id = placement == AdPlacement.Default ?
                 mAdSettings.DefaultRewardedAdId.Id : FindIdForPlacement(mAdSettings.CustomRewardedAdIds, placement);
 
@@ -398,7 +398,7 @@ namespace EasyMobile
 
         protected override void ApplyDataPrivacyConsent(ConsentStatus consent)
         {
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
             // https://unityads.unity3d.com/help/legal/gdpr
             switch (consent)
             {
@@ -419,7 +419,7 @@ namespace EasyMobile
 
         #region GDPR Stuff
 
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
 
         /// <summary>
         /// Set appropriate GDPR metadata. This can be done either before or after initialization.
@@ -439,7 +439,7 @@ namespace EasyMobile
 
         #region Ad Event Handlers
 
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
 
         void InternalShowBannerAdCallback(AdPlacement placement)
         {
@@ -582,7 +582,7 @@ namespace EasyMobile
 
         #region Private stuff
 
-#if UNITY_ADS || UNITY_MONETIZATION
+#if EM_UNITY_ADS || UNITY_MONETIZATION
 
         private AdPlacement FindBannerPlacementWithId(string placementId)
         {

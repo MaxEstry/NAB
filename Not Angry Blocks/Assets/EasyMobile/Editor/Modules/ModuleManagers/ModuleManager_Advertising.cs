@@ -95,7 +95,11 @@ namespace EasyMobile.Editor
                 symbols.Add(EM_ScriptingSymbols.UnityMonetization);
             }
 
-            // Unity Ads defines a symbol themselves.
+            // Unity Ads
+            if (EM_ExternalPluginManager.IsUnityAdAvail())
+            {
+                symbols.Add(EM_ScriptingSymbols.UnityAds);
+            }
 
             // Defines all ad symbols on all platforms.
             GlobalDefineManager.SDS_AddDefinesOnAllPlatforms(symbols.ToArray());

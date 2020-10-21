@@ -6,13 +6,13 @@ using EasyMobile.Internal;
 
 namespace EasyMobile
 {
-    #if UNITY_IOS
+#if UNITY_IOS
     using EasyMobile.Internal.StoreReview.iOS;
-    #endif
+#endif
 
-    #if UNITY_ANDROID
+#if UNITY_ANDROID
     using EasyMobile.Internal.StoreReview.Android;
-    #endif
+#endif
 
     [AddComponentMenu("")]
     public class StoreReview : MonoBehaviour
@@ -25,14 +25,14 @@ namespace EasyMobile
             Rate
         }
 
-        #if UNITY_ANDROID
+#if UNITY_ANDROID
         // The current active rating request dialog
         public static StoreReview Instance { get; private set; }
-        #endif
+#endif
 
-        #if UNITY_ANDROID && !UNITY_EDITOR
+#if UNITY_ANDROID && !UNITY_EDITOR
         private static readonly string RATING_DIALOG_GAMEOBJECT = "MobileNativeRatingDialog";
-        #endif
+#endif
 
         // Remember to not show up again if the user refuses to give feedback.
         private const int IOS_SYSTEM_DEFAULT_ANNUAL_CAP = 3;
@@ -51,7 +51,7 @@ namespace EasyMobile
         /// </summary>
         public static void RequestRating()
         {
-            RequestRating(null);
+            DoRequestRating(null, null);
         }
 
         /// <summary>
@@ -60,6 +60,7 @@ namespace EasyMobile
         /// (on iOS 10.3 or newer, the rating dialog content is controlled by the system).
         /// </summary>
         /// <param name="dialogContent">Dialog content.</param>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static void RequestRating(RatingDialogContent dialogContent)
         {
             DoRequestRating(dialogContent, null);
@@ -77,6 +78,7 @@ namespace EasyMobile
         /// <param name="dialogContent">Dialog content, pass null to use the default content.</param>
         /// <param name="callback">Callback receiving user selection as input. You need to
         /// implement this callback to take appropriate actions corresponding to the user input.</param>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static void RequestRating(RatingDialogContent dialogContent, Action<UserAction> callback)
         {
             DoRequestRating(dialogContent, callback);
@@ -86,6 +88,7 @@ namespace EasyMobile
         /// Gets the default content of the rating dialog as configured in the module settings.
         /// </summary>
         /// <returns>The default dialog content.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static RatingDialogContent GetDefaultDialogContent()
         {
             return EM_Settings.RatingRequest.DefaultRatingDialogContent;
@@ -101,6 +104,7 @@ namespace EasyMobile
         /// was disabled (the user either selected Don't ask again or already accepted to rate before).
         /// </summary>
         /// <returns><c>true</c> if can request rating; otherwise, <c>false</c>.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static bool CanRequestRating()
         {
             if (IsDisplayConstraintIgnored())
@@ -117,6 +121,7 @@ namespace EasyMobile
         /// and the current build is a development one.
         /// </summary>
         /// <returns><c>true</c> if all display constraints are ignored; otherwise, <c>false</c>.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static bool IsDisplayConstraintIgnored()
         {
             return Util.IsUnityDevelopmentBuild() && EM_Settings.RatingRequest.IgnoreConstraintsInDevelopment;
@@ -128,6 +133,7 @@ namespace EasyMobile
         /// On iOS, this is only applicable to versions older than 10.3.
         /// </summary>
         /// <returns><c>true</c> if rating request is disabled; otherwise, <c>false</c>.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static bool IsRatingRequestDisabled()
         {
             return StorageUtil.GetInt(RATING_REQUEST_DISABLE_PPKEY, RATING_REQUEST_ENABLED) == RATING_REQUEST_DISABLED;
@@ -138,6 +144,7 @@ namespace EasyMobile
         /// rating request can be made.
         /// </summary>
         /// <returns>The remaining delay time after installation in days.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static int GetRemainingDelayAfterInstallation()
         {
             int daysSinceInstallation = DateTime.Now.SameTimeZoneSubtract(RuntimeHelper.GetAppInstallationTime()).Days;
@@ -149,6 +156,7 @@ namespace EasyMobile
         /// Gets the remaining cooling-off days until the next request can be made.
         /// </summary>
         /// <returns>The remaining cooling-off days.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static int GetRemainingCoolingOffDays()
         {
             int daysPast = DateTime.Now.SameTimeZoneSubtract(GetLastRequestTimestamp()).Days;
@@ -161,6 +169,7 @@ namespace EasyMobile
         /// Epoch time (01/01/1970) will be returned.
         /// </summary>
         /// <returns>The last request timestamp.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static DateTime GetLastRequestTimestamp()
         {
             return StorageUtil.GetTime(LAST_REQUEST_TIMESTAMP_PPKEY, Util.UnixEpoch.ToLocalTime());
@@ -170,6 +179,7 @@ namespace EasyMobile
         /// Gets the number of requests used this year.
         /// </summary>
         /// <returns>The this year used requests.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static int GetThisYearUsedRequests()
         {
             return GetAnnualUsedRequests(DateTime.Now.Year);
@@ -180,6 +190,7 @@ namespace EasyMobile
         /// Note that this is not applicable to iOS 10.3 or newer.
         /// </summary>
         /// <returns>This year unused requests.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static int GetThisYearRemainingRequests()
         {
             return GetAnnualRequestsLimit() - GetThisYearUsedRequests();
@@ -189,21 +200,23 @@ namespace EasyMobile
         /// Gets the maximum number of requests that can be made per year.
         /// </summary>
         /// <returns>The annual requests limit.</returns>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static int GetAnnualRequestsLimit()
         {
-            #if UNITY_IOS && !UNITY_EDITOR
+#if UNITY_IOS && !UNITY_EDITOR
             if (iOSNativeUtility.CanUseBuiltinRequestReview())
             {
                 // iOS 10.3+.
                 return IOS_SYSTEM_DEFAULT_ANNUAL_CAP;
             }
-            #endif
+#endif
             return (int)EM_Settings.RatingRequest.AnnualCap;
         }
 
         /// <summary>
         /// Disables the rating request dialog show that it can't be shown anymore.
         /// </summary>
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         public static void DisableRatingRequest()
         {
             StorageUtil.SetInt(RATING_REQUEST_DISABLE_PPKEY, RATING_REQUEST_DISABLED);
@@ -228,12 +241,13 @@ namespace EasyMobile
 
         private static void DoRequestRating(RatingDialogContent content, Action<UserAction> callback)
         {
-            if (!CanRequestRating())
-            {
-                Debug.Log("Could not display the rating request popup because it was disabled, " +
-                    "or one or more display constraints are not satisfied.");
-                return;
-            }
+            //!Remove Constrains check since from version 2.8.0 EM Pro use native review popup on both platform.
+            // if (!CanRequestRating())
+            // {
+            //     Debug.Log("Could not display the rating request popup because it was disabled, " +
+            //         "or one or more display constraints are not satisfied.");
+            //     return;
+            // }
 
             // If no custom content was provided, use the default one.
             if (content == null)
@@ -244,9 +258,9 @@ namespace EasyMobile
             // Callback register
             customBehaviour = callback;
 
-            #if UNITY_EDITOR
+#if UNITY_EDITOR
             Debug.Log("Request review is only available on iOS and Android devices.");
-            #elif UNITY_IOS
+#elif UNITY_IOS
             if (iOSNativeUtility.CanUseBuiltinRequestReview())
             {
                 // iOS 10.3+.
@@ -269,50 +283,55 @@ namespace EasyMobile
                 }
             }
 
-            if (!IsDisplayConstraintIgnored())
-            {
-                // Increment the number of requests used this year.
-                SetAnnualUsedRequests(DateTime.Now.Year, GetAnnualUsedRequests(DateTime.Now.Year) + 1);
+            // if (!IsDisplayConstraintIgnored())
+            // {
+            //     // Increment the number of requests used this year.
+            //     SetAnnualUsedRequests(DateTime.Now.Year, GetAnnualUsedRequests(DateTime.Now.Year) + 1);
 
-                // Store the request timestamp
-                StorageUtil.SetTime(LAST_REQUEST_TIMESTAMP_PPKEY, DateTime.Now);
-            }
-            #elif UNITY_ANDROID
+            //     // Store the request timestamp
+            //     StorageUtil.SetTime(LAST_REQUEST_TIMESTAMP_PPKEY, DateTime.Now);
+            // }
+#elif UNITY_ANDROID
             if (Instance != null)
                 return;    // only allow one alert at a time
 
             // Create a Unity game object to receive messages from native side
             Instance = new GameObject(RATING_DIALOG_GAMEOBJECT).AddComponent<StoreReview>();
+            #region native_review_popup
 
-            // Replace placeholder texts if any.
-            var texts = new RatingDialogContent(
-                            content.Title.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
-                            content.Message.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
-                            content.LowRatingMessage.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
-                            content.HighRatingMessage.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
-                            content.PostponeButtonText,
-                            content.RefuseButtonText,
-                            content.RateButtonText,
-                            content.CancelButtonText,
-                            content.FeedbackButtonText
-                        );
+            // // Replace placeholder texts if any.
+            // var texts = new RatingDialogContent(
+            //                 content.Title.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
+            //                 content.Message.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
+            //                 content.LowRatingMessage.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
+            //                 content.HighRatingMessage.Replace(RatingDialogContent.PRODUCT_NAME_PLACEHOLDER, Application.productName),
+            //                 content.PostponeButtonText,
+            //                 content.RefuseButtonText,
+            //                 content.RateButtonText,
+            //                 content.CancelButtonText,
+            //                 content.FeedbackButtonText
+            //             );
 
-            // Show the Android rating request
-            AndroidNativeUtility.RequestRating(texts, EM_Settings.RatingRequest);
+            // // Show the Android rating request
+            // AndroidNativeUtility.RequestRating(texts, EM_Settings.RatingRequest);
+            #endregion
+            #region store_review
+            AndroidNativeUtility.RequestStoreReview(Instance.name, "OnAndroidRatingDialogCallback");
+            #endregion
+            // if (!IsDisplayConstraintIgnored())
+            // {
+            //     // Increment the number of requests used this year.
+            //     SetAnnualUsedRequests(DateTime.Now.Year, GetAnnualUsedRequests(DateTime.Now.Year) + 1);
 
-            if (!IsDisplayConstraintIgnored())
-            {
-                // Increment the number of requests used this year.
-                SetAnnualUsedRequests(DateTime.Now.Year, GetAnnualUsedRequests(DateTime.Now.Year) + 1);
-
-                // Store the request timestamp
-                StorageUtil.SetTime(LAST_REQUEST_TIMESTAMP_PPKEY, DateTime.Now);
-            }
-            #else
+            //     // Store the request timestamp
+            //     StorageUtil.SetTime(LAST_REQUEST_TIMESTAMP_PPKEY, DateTime.Now);
+            // }
+#else
             Debug.Log("Request review is not supported on this platform.");
-            #endif
+#endif
         }
 
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         private static void DefaultCallback(UserAction action)
         {
             if (customBehaviour != null)
@@ -321,6 +340,7 @@ namespace EasyMobile
                 PerformDefaultBehaviour(action);
         }
 
+        [Obsolete("This method has been deprecated since Easy Mobile Pro version 2.8.0")]
         private static void PerformDefaultBehaviour(UserAction action)
         {
             switch (action)
@@ -344,11 +364,11 @@ namespace EasyMobile
                     }
                     else if (Application.platform == RuntimePlatform.Android)
                     {
-                        #if UNITY_5_6_OR_NEWER
+#if UNITY_5_6_OR_NEWER
                         Application.OpenURL("market://details?id=" + Application.identifier);
-                        #else
+#else
                         Application.OpenURL("market://details?id=" + Application.bundleIdentifier);
-                        #endif
+#endif
                     }
                     // The user has rated, don't ask again.
                     DisableRatingRequest();
@@ -359,7 +379,7 @@ namespace EasyMobile
         // Map button index into UserAction.
         private static UserAction ConvertToUserAction(int index)
         {
-            #if UNITY_IOS
+#if UNITY_IOS
             // Applicable for pre-10.3 only. Note that there's no Feedback option.
             switch (index)
             {
@@ -372,7 +392,7 @@ namespace EasyMobile
                 default:
                     return UserAction.Postpone;
             }
-            #elif UNITY_ANDROID
+#elif UNITY_ANDROID
             switch (index)
             {
                 case 0:
@@ -386,34 +406,38 @@ namespace EasyMobile
                 default:
                     return UserAction.Postpone;
             }
-            #else
+#else
             return UserAction.Postpone;
-            #endif
+#endif
         }
 
-        #if UNITY_IOS
+#if UNITY_IOS
         // Pre-10.3 iOS rating dialog callback
         private static void OnIosRatingDialogCallback(int button)
         {
             // Always go through the default callback first.
+#pragma warning disable 0618
             DefaultCallback(ConvertToUserAction(button));
+#pragma warning restore 0618
         }
-        #endif
+#endif
 
-        #if UNITY_ANDROID
+#if UNITY_ANDROID
         // Callback to be called from Android native side with UnitySendMessage
         private void OnAndroidRatingDialogCallback(string userAction)
         {
-            int index = Convert.ToInt16(userAction);
+            // int index = Convert.ToInt16(userAction);
 
             // Always go through the default callback first.
-            DefaultCallback(ConvertToUserAction(index));
+            // #pragma warning disable 0618
+            //             DefaultCallback(ConvertToUserAction(index));
+            // #pragma warning restore 0618
 
             // Destroy the used object
             Instance = null;
             Destroy(gameObject);
         }
-        #endif
+#endif
 
         #endregion
     }

@@ -1121,7 +1121,7 @@ namespace EasyMobile.Editor
                     return false;
 #endif
                 case AdNetwork.UnityAds:
-#if UNITY_ADS
+#if EM_UNITY_ADS
                     return true;
 #else
                     return false;

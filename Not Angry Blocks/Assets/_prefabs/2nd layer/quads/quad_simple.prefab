@@ -3074,7 +3074,7 @@ Rigidbody2D:
   m_Material: {fileID: 6200000, guid: bd142db62c6d82d418d7fd72aa390f12, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 2
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!114 &1038734479704819397
 MonoBehaviour:
@@ -3114,7 +3114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33fbcb04c243139438f8b0b3f28d0e81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 1
+  life: 0.888
   target: {fileID: 0}
   fade: 0
   fadeDuration: 1
@@ -3142,7 +3142,7 @@ MonoBehaviour:
   damageMax: 0
   alphaCount: 1
   alphaCountMin: 0
-  alphaCountMax: 8
+  alphaCountMax: 260
   alphaRatio: 0
   alphaRatioMin: 0
   alphaRatioMax: 0

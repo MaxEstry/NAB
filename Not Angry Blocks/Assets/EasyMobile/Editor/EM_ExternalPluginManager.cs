@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using System.Collections;
+using System;
 
 namespace EasyMobile.Editor
 {
@@ -34,6 +35,9 @@ namespace EasyMobile.Editor
         // TapJoy
         public const string TapJoyNameSpace = "TapjoyUnity";
 
+        //UnityAds
+        public const string UnityAdNameSpace = "UnityEngine.Advertisements";
+
         // Unity Monetization
         public const string UnityMonetizationClass = "UnityEngine.Monetization";
 
@@ -56,6 +60,13 @@ namespace EasyMobile.Editor
 
         // PlayMaker Unity UI add-on
         public const string PlayMakerUguiAddOnClass = "PlayMakerUGuiSceneProxy";
+
+        // External Dependency Manager namespaces and classes
+        public const string GoogleNameSpace = "Google";
+        public const string IosResolverClass = "IOSResolver";
+        public const string JarResolverNamespace = "Google.JarResolver";
+        public const string JarResolverDependencyClass = "Dependency";
+        public const string PackageManagerResolverClass = "PackageManagerResolver";
 
         // Advertising 3rd party plugins URLs
         public const string AdColonyDownloadURL = "https://github.com/AdColony/AdColony-Unity-Plugin";
@@ -177,6 +188,16 @@ namespace EasyMobile.Editor
             if (!EM_Settings.Advertising.Tapjoy.Enable)
                 return false;
             return EM_EditorUtil.NamespaceExists(TapJoyNameSpace);
+        }
+
+        /// Determindes if UnityAds plugin is available.
+        /// </summary>
+        /// <returns><c>true</c> if UnityAds plugin is available, otherwise <c>false</c>.</returns>
+        public static bool IsUnityAdAvail()
+        {
+            if (!EM_Settings.Advertising.UnityAds.Enable)
+                return false;
+            return EM_EditorUtil.NamespaceExists(UnityAdNameSpace);
         }
 
         /// Determines if Unity Monetization plugin is available.
@@ -352,7 +373,13 @@ namespace EasyMobile.Editor
 
         public static bool IsPlayServicesResolverImported()
         {
-            return EM_ProjectSettings.Instance.GetBool(EM_Constants.PSK_ImportedPlayServicesResolver, false);
+            var imported = EM_ProjectSettings.Instance.GetBool(EM_Constants.PSK_ImportedPlayServicesResolver, false);
+
+            var iosResolver = EM_EditorUtil.FindClass(IosResolverClass, GoogleNameSpace);
+            var jarResolver = EM_EditorUtil.FindClass(JarResolverDependencyClass, JarResolverNamespace);
+            var packageResolver = EM_EditorUtil.FindClass(PackageManagerResolverClass, GoogleNameSpace);
+
+            return iosResolver != null || jarResolver != null || packageResolver != null || imported;
         }
 
         public static void ImportPlayServicesResolver(bool interactive)
