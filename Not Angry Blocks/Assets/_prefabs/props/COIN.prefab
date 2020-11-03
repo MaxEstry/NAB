@@ -206,7 +206,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: die
         linkStyle: 0
         linkConstraint: 0
@@ -598,7 +598,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: move
         linkStyle: 0
         linkConstraint: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: first move
         linkStyle: 0
         linkConstraint: 0
@@ -1108,7 +1108,7 @@ MonoBehaviour:
     events:
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     - name: collect
       isSystemEvent: 0
       isGlobal: 1
@@ -1353,7 +1353,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: spin
         linkStyle: 0
         linkConstraint: 0
@@ -1469,7 +1469,7 @@ MonoBehaviour:
     events:
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables:

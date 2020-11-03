@@ -22,6 +22,7 @@ namespace EasyMobile
     public enum BannerAdNetwork
     {
         None = AdNetwork.None,
+        AdColony = AdNetwork.AdColony,
         AdMob = AdNetwork.AdMob,
         AppLovin = AdNetwork.AppLovin,
         AudienceNetwork = AdNetwork.AudienceNetwork,

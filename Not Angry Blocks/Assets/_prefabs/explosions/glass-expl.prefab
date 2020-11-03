@@ -4880,7 +4880,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: die
         linkStyle: 0
         linkConstraint: 0
@@ -5081,7 +5081,7 @@ MonoBehaviour:
     events:
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables: []

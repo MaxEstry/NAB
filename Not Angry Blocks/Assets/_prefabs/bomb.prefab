@@ -1110,7 +1110,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: create
         linkStyle: 0
         linkConstraint: 0
@@ -1252,7 +1252,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: die
         linkStyle: 0
         linkConstraint: 0
@@ -1702,7 +1702,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: set
         linkStyle: 0
         linkConstraint: 0
@@ -2140,7 +2140,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: delay
         linkStyle: 0
         linkConstraint: 0
@@ -2220,7 +2220,7 @@ MonoBehaviour:
     events:
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     - name: go
       isSystemEvent: 0
       isGlobal: 1
@@ -2562,7 +2562,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: bye
         linkStyle: 0
         linkConstraint: 0
@@ -2810,7 +2810,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     globalTransitions: []
     variables:
       floatVariables:
@@ -3042,7 +3042,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: w8
         linkStyle: 0
         linkConstraint: 0
@@ -3286,7 +3286,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     - name: blink
       isSystemEvent: 0
       isGlobal: 0
@@ -3337,9 +3337,9 @@ MonoBehaviour:
     handleTriggerEnter2D: 0
     handleTriggerExit2D: 0
     handleTriggerStay2D: 0
-    handleCollisionEnter2D: 1
+    handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
-    handleCollisionStay2D: 1
+    handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0

@@ -176,8 +176,12 @@ namespace EasyMobile
         private bool mIsRewardedAdCompleted = false;
         private InterstitialAd mDefaultInterstitialAd = null;
         private InterstitialAd mDefaultRewardedAd = null;
+        private AdColonyAdView mDefaultBannerAd = null;
         private Dictionary<AdPlacement, InterstitialAd> mCustomInterstitialAds = null;
         private Dictionary<AdPlacement, InterstitialAd> mCustomRewardedAds = null;
+        private Dictionary<AdPlacement, AdColonyAdView> mCustomBannerAds = null;
+        private bool showDefaultBannerAd = false;
+        private Dictionary<AdPlacement, bool> showCustomBannerAds = null;
 
         #endif
 
@@ -208,7 +212,7 @@ namespace EasyMobile
 
         public override AdNetwork Network { get { return AdNetwork.AdColony; } }
 
-        public override bool IsBannerAdSupported { get { return false; } }
+        public override bool IsBannerAdSupported { get { return true; } }
 
         public override bool IsInterstitialAdSupported { get { return true; } }
 
@@ -310,12 +314,18 @@ namespace EasyMobile
             if (mCustomRewardedAds == null)
                 mCustomRewardedAds = new Dictionary<AdPlacement, InterstitialAd>();
 
+            if (mCustomBannerAds == null)
+                mCustomBannerAds = new Dictionary<AdPlacement, AdColonyAdView>();
+
+            if (showCustomBannerAds == null)
+                showCustomBannerAds = new Dictionary<AdPlacement, bool>();
             // Subscribe ad events.
             if (!mSubscribedEvents)
             {
                 mSubscribedEvents = true;
                 Ads.OnConfigurationCompleted += OnConfigurationCompletedHandle;
                 Ads.OnRequestInterstitial += OnRequestAdCompleted;
+                Ads.OnAdViewLoaded += OnAdViewLoaded;
                 Ads.OnRequestInterstitialFailedWithZone += OnRequestAdFailedWithZone;
                 Ads.OnOpened += OnAdOpened;
                 Ads.OnClosed += OnAdClosed;
@@ -338,17 +348,117 @@ namespace EasyMobile
 
         protected override void InternalShowBannerAd(AdPlacement placement, BannerAdPosition position, BannerAdSize size)
         {
-            Debug.LogWarning(BANNER_UNSUPPORTED_MESSAGE);
+            #if EM_ADCOLONY
+            AdColonyAdView adview = null;
+
+            if (placement == AdPlacement.Default)
+            {
+                adview = mDefaultBannerAd;
+                showDefaultBannerAd = true;
+            }
+            else
+            {
+                mCustomBannerAds.TryGetValue(placement, out adview);
+                showCustomBannerAds[placement] = true;
+            }
+
+            if (adview != null)
+                adview.ShowAdView();
+            else
+                LoadBannerAd(placement, position, size);
+            #endif
+        }
+
+        private void LoadBannerAd(AdPlacement placement, BannerAdPosition position, BannerAdSize size)
+        {
+            #if EM_ADCOLONY
+            string id = placement == AdPlacement.Default ?
+                mAdSettings.DefaultBannerAdId.Id : FindIdForPlacement(mAdSettings.CustomBannerAdIds, placement);
+
+            AdColony.AdPosition bannerPosition = AdPosition.Bottom;
+            switch (position)
+            {
+                case BannerAdPosition.Top:
+                    bannerPosition = AdPosition.Top;
+                    break;
+                case BannerAdPosition.Bottom:
+                    bannerPosition = AdPosition.Bottom;
+                    break;
+                case BannerAdPosition.TopLeft:
+                    bannerPosition = AdPosition.TopLeft;
+                    break;
+                case BannerAdPosition.TopRight:
+                    bannerPosition = AdPosition.TopRight;
+                    break;
+                case BannerAdPosition.BottomLeft:
+                    bannerPosition = AdPosition.BottomLeft;
+                    break;
+                case BannerAdPosition.BottomRight:
+                    bannerPosition = AdPosition.BottomRight;
+                    break;
+                default:
+                    break;
+            }
+            var adOptions = new AdOptions()
+            {
+                ShowPrePopup = mAdSettings.EnableRewardedAdPrePopup,
+                ShowPostPopup = mAdSettings.EnableRewardedAdPostPopup
+            };
+
+            if (!string.IsNullOrEmpty(id))
+                AdColony.Ads.RequestAdView(id, AdColony.AdSize.Banner, bannerPosition, adOptions);
+            else
+                Debug.Log("Attempting to load AdColony banner ad with an undefined ID at placement " + AdPlacement.GetPrintableName(placement));
+            #endif
         }
 
         protected override void InternalHideBannerAd(AdPlacement placement)
         {
-            Debug.LogWarning(BANNER_UNSUPPORTED_MESSAGE);
+            #if EM_ADCOLONY
+            AdColonyAdView adview = null;
+
+            if (placement == AdPlacement.Default)
+            {
+                adview = mDefaultBannerAd;
+                showDefaultBannerAd = false;
+            }
+            else
+            {
+                mCustomBannerAds.TryGetValue(placement, out adview);
+                showCustomBannerAds[placement] = false;
+            }
+
+            if (adview != null)
+                adview.HideAdView();
+            #endif
         }
 
         protected override void InternalDestroyBannerAd(AdPlacement placement)
         {
-            Debug.LogWarning(BANNER_UNSUPPORTED_MESSAGE);
+            #if EM_ADCOLONY
+            AdColonyAdView adview = null;
+
+            if (placement == AdPlacement.Default)
+                adview = mDefaultBannerAd;
+            else
+                mCustomBannerAds.TryGetValue(placement, out adview);
+
+
+            if (adview != null)
+                adview.DestroyAdView();
+
+            if (placement == AdPlacement.Default)
+            {
+                mDefaultBannerAd = null;
+                showDefaultBannerAd = false;
+            }
+            else
+            {
+                mCustomBannerAds[placement] = null;
+                showCustomBannerAds[placement] = false;
+            }
+
+            #endif
         }
 
         protected override void InternalLoadInterstitialAd(AdPlacement placement)
@@ -488,11 +598,12 @@ namespace EasyMobile
             List<string> zoneIds = new List<string>
             {
                 mAdSettings.DefaultInterstitialAdId.Id,
-                mAdSettings.DefaultRewardedAdId.Id
+                mAdSettings.DefaultRewardedAdId.Id,
+                mAdSettings.DefaultBannerAdId.Id
             };
             AddCustomZoneIDs(zoneIds, mAdSettings.CustomInterstitialAdIds);
             AddCustomZoneIDs(zoneIds, mAdSettings.CustomRewardedAdIds);
-
+            AddCustomZoneIDs(zoneIds, mAdSettings.CustomBannerAdIds);
             Ads.Configure(
                 mAdSettings.AppId.Id,
                 appOptions,
@@ -637,6 +748,32 @@ namespace EasyMobile
         }
 
         /// <summary>
+        /// Save a requested ad to use later.
+        /// </summary>
+        /// Called in OnAdViewLoaded event handlers.
+        /// <param name="adView">Requested ad.</param>
+        private void SaveRequestedAdView(AdColonyAdView adView)
+        {
+            // Check if the requested ad is default ad
+            if(IsDefaultBannerAd(adView.ZoneId))
+            {
+                mDefaultBannerAd = adView;
+                if (showDefaultBannerAd)
+                    mDefaultBannerAd.ShowAdView();
+                return;
+            }
+            var bannerPlm = FindPlacementOfCustomBannerAd(adView.ZoneId);
+            if(bannerPlm != null)
+            {
+                mCustomBannerAds[bannerPlm] = adView;
+                bool allowToShow = false;
+                showCustomBannerAds.TryGetValue(bannerPlm.ToAdPlacement(), out allowToShow);
+                if (allowToShow)
+                    mCustomBannerAds[bannerPlm].ShowAdView();
+            }
+        }
+
+        /// <summary>
         /// When an ad is closed. Check the ad's info and raise an event if possible.
         /// </summary>
         /// Called in OnAdClosed event handler.
@@ -707,6 +844,20 @@ namespace EasyMobile
         }
 
         /// <summary>
+        /// Check if an ad is defined in the settings as default banner ad.
+        /// </summary>
+        private bool IsDefaultBannerAd(string zoneId)
+        {
+            if (mAdSettings == null)
+                return false;
+
+            if (zoneId == null)
+                return false;
+
+            return zoneId.Equals(mAdSettings.DefaultBannerAdId.Id);
+        }
+
+        /// <summary>
         /// Finds the placement associated with the custom interstitial ad with the specified ID.
         /// Returns null if no such placement found.
         /// </summary>
@@ -734,14 +885,28 @@ namespace EasyMobile
             return mAdSettings.CustomRewardedAdIds.FirstOrDefault(kvp => kvp.Value.Id.Equals(zoneId)).Key;
         }
 
-        #endif
+        /// <summary>
+        /// Finds the placement associated with the custom banner ad with the specified ID.
+        /// Returns null if no such placement found.
+        /// </summary>
+        /// <returns>The placement of custom banner ad.</returns>
+        /// <param name="zoneId">Zone identifier.</param>
+        private AdPlacement FindPlacementOfCustomBannerAd(string zoneId)
+        {
+            if (mAdSettings == null || mAdSettings.CustomBannerAdIds == null)
+                return null;
+
+            return mAdSettings.CustomBannerAdIds.FirstOrDefault(kvp => kvp.Value.Id.Equals(zoneId)).Key;
+        }
+
+#endif
 
         #endregion // Private Methods
 
         #region Ad Event Handlers
 
-        #if EM_ADCOLONY
-        
+#if EM_ADCOLONY
+
         private void OnConfigurationCompletedHandle(List<Zone> obj)
         {
             // Done initializing.
@@ -758,6 +923,12 @@ namespace EasyMobile
         {
             Debug.Log("AdColony successfully loaded ad with zoneId: " + ad.ZoneId);
             SaveRequestedAd(ad);
+        }
+
+        private void OnAdViewLoaded(AdColonyAdView adView)
+        {
+            Debug.Log("AdColony succesfully loaded banner ad with zoneId: " + adView.ZoneId);
+            SaveRequestedAdView(adView);
         }
 
         private void OnAdOpened(InterstitialAd ad)
@@ -807,7 +978,7 @@ namespace EasyMobile
         {
         }
 
-        #endif
+#endif
 
         #endregion  // Ad Event Handlers
 

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mAdvertisingSettings:
     mAutoLoadAdsMode: 2
-    mAdCheckingInterval: 10
-    mAdLoadingInterval: 20
+    mAdCheckingInterval: 5
+    mAdLoadingInterval: 5
     mIosDefaultAdNetworks:
       bannerAdNetwork: 0
       interstitialAdNetwork: 0
@@ -38,10 +38,16 @@ MonoBehaviour:
       mDefaultRewardedAdId:
         mIosId: 
         mAndroidId: 
+      mDefaultBannerAdId:
+        mIosId: 
+        mAndroidId: 
       mCustomInterstitialAdIds:
         keys: []
         values: []
       mCustomRewardedAdIds:
+        keys: []
+        values: []
+      mCustomBannerAdIds:
         keys: []
         values: []
     mAdMob:
@@ -57,13 +63,13 @@ MonoBehaviour:
         mAndroidId: 
       mDefaultBannerAdId:
         mIosId: 
-        mAndroidId: ca-app-pub-3853912067304581/5451700364
+        mAndroidId: ca-app-pub-3944877156486376/5316440120
       mDefaultInterstitialAdId:
         mIosId: 
-        mAndroidId: ca-app-pub-3853912067304581/2059250269
+        mAndroidId: ca-app-pub-3944877156486376/1764207923
       mDefaultRewardedAdId:
         mIosId: 
-        mAndroidId: 
+        mAndroidId: ca-app-pub-3944877156486376/7099816155
       mCustomBannerAdIds:
         keys: []
         values: []
@@ -250,6 +256,13 @@ MonoBehaviour:
       _description: 
       _storeSpecificIds: []
       _isEditingAdvanced: 0
+    - _name: Remove Ads
+      _type: 1
+      _id: removeads
+      _price: 
+      _description: 
+      _storeSpecificIds: []
+      _isEditingAdvanced: 0
   mNotificationSettings:
     mAutoInit: 1
     mAutoInitDelay: 0
@@ -282,7 +295,14 @@ MonoBehaviour:
       mContent: 
       mTitle: Privacy Consent
       mToggles: []
-      mActionButtons: []
+      mActionButtons:
+      - id: 
+        title: 
+        interactable: 0
+        titleColor: {r: 0, g: 0, b: 0, a: 0}
+        backgroundColor: {r: 0, g: 0, b: 0, a: 0}
+        uninteractableTitleColor: {r: 0, g: 0, b: 0, a: 0}
+        uninteractableBackgroundColor: {r: 0, g: 0, b: 0, a: 0}
     mConsentDialogComposerSettings:
       mToggleSelectedIndex: 0
       mButtonSelectedIndex: 0
@@ -341,10 +361,10 @@ MonoBehaviour:
       mIOSInfoPlistKeys:
       - mKey: NSContactsUsageDescription
         mValue: '[Your usage description]'
-  mIsAdModuleEnable: 0
+  mIsAdModuleEnable: 1
   mIsIAPModuleEnable: 1
   mIsGameServiceModuleEnable: 0
   mIsNotificationModuleEnable: 0
   mIsSharingModuleEnable: 0
-  mActiveModuleIndex: 3
-  mIsSelectingModule: 1
+  mActiveModuleIndex: 0
+  mIsSelectingModule: 0

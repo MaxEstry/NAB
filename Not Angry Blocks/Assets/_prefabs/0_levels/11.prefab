@@ -85,6 +85,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_Mesh
@@ -1487,6 +1492,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_Mesh
@@ -1587,6 +1597,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_Mesh
@@ -1685,6 +1700,11 @@ PrefabInstance:
     - target: {fileID: 977159035364270244, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
@@ -1793,6 +1813,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_Mesh
@@ -1891,6 +1916,11 @@ PrefabInstance:
     - target: {fileID: 977159035364270244, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
@@ -1993,6 +2023,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_Mesh
@@ -2091,6 +2126,11 @@ PrefabInstance:
     - target: {fileID: 977159035364270244, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
@@ -2291,6 +2331,11 @@ PrefabInstance:
     - target: {fileID: 977159035364270244, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
         type: 3}
       propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821733432632276863, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,
+        type: 3}
+      propertyPath: fsm.states.Array.data[2].transitions.Array.data[0].fsmEvent.isGlobal
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7389040269492527061, guid: 6eeb3f1e73ff130438ef4c63adc9da7f,

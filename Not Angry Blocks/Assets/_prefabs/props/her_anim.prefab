@@ -257,7 +257,7 @@ MonoBehaviour:
     events:
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     - name: done
       isSystemEvent: 0
       isGlobal: 0

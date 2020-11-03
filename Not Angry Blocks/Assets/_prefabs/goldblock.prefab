@@ -6442,7 +6442,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: decay
         linkStyle: 0
         linkConstraint: 0
@@ -6715,7 +6715,7 @@ MonoBehaviour:
     events:
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     - name: do
       isSystemEvent: 0
       isGlobal: 1
@@ -7063,7 +7063,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: bye
         linkStyle: 0
         linkConstraint: 0

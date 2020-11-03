@@ -5441,7 +5441,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: bye 2
         linkStyle: 0
         linkConstraint: 0
@@ -5588,7 +5588,7 @@ MonoBehaviour:
     events:
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     - name: animout
       isSystemEvent: 0
       isGlobal: 1

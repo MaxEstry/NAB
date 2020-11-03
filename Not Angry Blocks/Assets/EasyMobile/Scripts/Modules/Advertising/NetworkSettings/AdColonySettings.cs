@@ -70,6 +70,16 @@ namespace EasyMobile
         }
 
         /// <summary>
+        /// Gets or sets the default banner ad identifier.
+        /// </summary>
+        /// <value>The default rewarded ad identifier.</value>
+        public AdId DefaultBannerAdId
+        {
+            get { return mDefaultBannerAdId; }
+            set { mDefaultBannerAdId = value; }
+        }
+
+        /// <summary>
         /// Gets or sets the list of custom interstitial ad identifiers.
         /// Each identifier is associated with an ad placement.
         /// </summary>
@@ -91,6 +101,17 @@ namespace EasyMobile
             set { mCustomRewardedAdIds = (Dictionary_AdPlacement_AdId)value; }
         }
 
+        /// <summary>
+        /// Gets or sets the list of custom banner ad identifiers.
+        /// Each identifier is associated with an ad placement.
+        /// </summary>
+        /// <value>The custom rewarded ad identifiers.</value>
+        public Dictionary<AdPlacement, AdId> CustomBannerAdIds
+        {
+            get { return mCustomBannerAdIds; }
+            set { mCustomBannerAdIds = (Dictionary_AdPlacement_AdId)value; }
+        }
+
         [SerializeField]
         private AdId mAppId = null;
         [SerializeField]
@@ -105,8 +126,12 @@ namespace EasyMobile
         [SerializeField]
         private AdId mDefaultRewardedAdId = null;
         [SerializeField]
+        private AdId mDefaultBannerAdId = null;
+        [SerializeField]
         private Dictionary_AdPlacement_AdId mCustomInterstitialAdIds = null;
         [SerializeField]
         private Dictionary_AdPlacement_AdId mCustomRewardedAdIds = null;
+        [SerializeField]
+        private Dictionary_AdPlacement_AdId mCustomBannerAdIds = null;
     }
 }

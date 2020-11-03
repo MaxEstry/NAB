@@ -210,7 +210,7 @@ MonoBehaviour:
       - fsmEvent:
           name: FINISHED
           isSystemEvent: 1
-          isGlobal: 0
+          isGlobal: 1
         toState: w8
         linkStyle: 0
         linkConstraint: 0
@@ -454,7 +454,7 @@ MonoBehaviour:
       isGlobal: 0
     - name: FINISHED
       isSystemEvent: 1
-      isGlobal: 0
+      isGlobal: 1
     - name: TRIGGER ENTER 2D
       isSystemEvent: 1
       isGlobal: 0
@@ -513,12 +513,12 @@ MonoBehaviour:
     activeStateName: 
     mouseEvents: 0
     handleLevelLoaded: 0
-    handleTriggerEnter2D: 1
+    handleTriggerEnter2D: 0
     handleTriggerExit2D: 0
     handleTriggerStay2D: 0
-    handleCollisionEnter2D: 1
+    handleCollisionEnter2D: 0
     handleCollisionExit2D: 0
-    handleCollisionStay2D: 1
+    handleCollisionStay2D: 0
     handleTriggerEnter: 0
     handleTriggerExit: 0
     handleTriggerStay: 0

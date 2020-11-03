@@ -355,6 +355,7 @@ namespace EasyMobile.Editor
                     EditorGUI.indentLevel++;
                     EditorGUILayout.PropertyField(AdProperties.adColonyDefaultInterstitialAdId.property, AdProperties.adColonyDefaultInterstitialAdId.content, true);
                     EditorGUILayout.PropertyField(AdProperties.adColonyDefaultRewardedAdId.property, AdProperties.adColonyDefaultRewardedAdId.content, true);
+                    EditorGUILayout.PropertyField(AdProperties.adColonyDefaultBannerAdId.property, AdProperties.adColonyDefaultBannerAdId.content, true);
                     EditorGUI.indentLevel--;
 
                     // Custom placements.
@@ -363,6 +364,7 @@ namespace EasyMobile.Editor
                     EditorGUI.indentLevel++;
                     EditorGUILayout.PropertyField(AdProperties.adColonyCustomInterstitialAdIds.property, AdProperties.adColonyCustomInterstitialAdIds.content, true);
                     EditorGUILayout.PropertyField(AdProperties.adColonyCustomRewardedAdIds.property, AdProperties.adColonyCustomRewardedAdIds.content, true);
+                    EditorGUILayout.PropertyField(AdProperties.adColonyCustomBannerAdIds.property, AdProperties.adColonyCustomBannerAdIds.content, true);
                     EditorGUI.indentLevel--;
 
                     // Ad settings.
@@ -1153,6 +1155,7 @@ namespace EasyMobile.Editor
                 var adColonySettings = AdProperties.adColonySettings.GetTargetObject() as AdColonySettings;
                 AddCustomAdsResource(finalResult, adColonySettings.CustomInterstitialAdIds, "AdColonyInterstitialAd");
                 AddCustomAdsResource(finalResult, adColonySettings.CustomRewardedAdIds, "AdColonyRewardedAd");
+                AddCustomAdsResource(finalResult, adColonySettings.CustomBannerAdIds, "AdColonyBannerAd");
             }
 
             if (IsPluginAvail(AdNetwork.AdMob))

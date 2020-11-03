@@ -87,8 +87,10 @@ namespace EasyMobile.Editor
             public static EMProperty adColonyEnableRewardedAdPostPopup = new EMProperty(new GUIContent("Show Rewarded Ad PostPopup", "Show popup after the rewarded video has finished"));
             public static EMProperty adColonyDefaultInterstitialAdId = new EMProperty(new GUIContent("Interstitial Ad"));
             public static EMProperty adColonyDefaultRewardedAdId = new EMProperty(new GUIContent("Rewarded Ad"));
+            public static EMProperty adColonyDefaultBannerAdId = new EMProperty(new GUIContent("Banner Ad"));
             public static EMProperty adColonyCustomInterstitialAdIds = new EMProperty(new GUIContent("Interstitial Ads"));
             public static EMProperty adColonyCustomRewardedAdIds = new EMProperty(new GUIContent("Rewarded Ads"));
+            public static EMProperty adColonyCustomBannerAdIds = new EMProperty(new GUIContent("Banner Ads"));
 
             // Admob properties.
             public static EMProperty adMobEnabled = new EMProperty(new GUIContent("AdMob enable"));
@@ -361,8 +363,10 @@ namespace EasyMobile.Editor
             AdProperties.adColonyEnableRewardedAdPostPopup.property = AdProperties.adColonySettings.FindPropertyRelative("mEnableRewardedAdPostPopup");
             AdProperties.adColonyDefaultInterstitialAdId.property = AdProperties.adColonySettings.FindPropertyRelative("mDefaultInterstitialAdId");
             AdProperties.adColonyDefaultRewardedAdId.property = AdProperties.adColonySettings.FindPropertyRelative("mDefaultRewardedAdId");
+            AdProperties.adColonyDefaultBannerAdId.property = AdProperties.adColonySettings.FindPropertyRelative("mDefaultBannerAdId");
             AdProperties.adColonyCustomInterstitialAdIds.property = AdProperties.adColonySettings.FindPropertyRelative("mCustomInterstitialAdIds");
             AdProperties.adColonyCustomRewardedAdIds.property = AdProperties.adColonySettings.FindPropertyRelative("mCustomRewardedAdIds");
+            AdProperties.adColonyCustomBannerAdIds.property = AdProperties.adColonySettings.FindPropertyRelative("mCustomBannerAdIds");
 
             // AdMob properties.
             AdProperties.admobSettings = AdProperties.mainProperty.FindPropertyRelative("mAdMob");
